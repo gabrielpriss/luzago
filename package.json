@@ -1,0 +1,10 @@
+{
+  "name": "luzagoalimentos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional Luzago Alimentos",
+  "scripts": {
+    "build": "node scripts/prepare-deploy.js",
+    "dev": "python3 -m http.server 3000"
+  }
+}

@@ -1,0 +1,232 @@
+/* Ajustes responsivos — Luzago Alimentos */
+
+html {
+    overflow-x: clip;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    overflow-x: clip;
+    width: 100%;
+    margin: 0;
+}
+
+/* Um único eixo de rolagem vertical — evita barra duplicada */
+html.mobile-menu-open,
+body.mobile-menu-open {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Contém filhos largos (grids, carrosséis, AOS) */
+header,
+footer,
+section,
+main {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+/* Parallax quebra layout e gera overflow no mobile */
+@media (max-width: 1023px) {
+    .empresa-bg,
+    [class*="empresa-bg"],
+    [style*="background-attachment: fixed"] {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Header compacto no mobile */
+@media (max-width: 767px) {
+    header .container {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    header img[alt="Luzago Alimentos"] {
+        height: 3.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    header img[alt="Luzago Alimentos"] {
+        height: 3rem;
+    }
+}
+
+/* Evita zoom automático em inputs no iOS */
+@media (max-width: 767px) {
+    input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Hero em páginas de categoria */
+@media (max-width: 767px) {
+    section[class*="-hero-bg"],
+    section.hero-bg {
+        min-height: auto;
+    }
+
+    section[class*="-hero-bg"] h1,
+    .blog-hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+
+    .hero-bg h1 {
+        font-size: 1.65rem;
+    }
+
+    .hero-bg {
+        min-height: 70vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Grid de categorias na home */
+@media (max-width: 767px) {
+    .product-card h3 {
+        font-size: 0.7rem;
+        line-height: 1.25;
+    }
+
+    .product-card img {
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-card {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Cards de produto */
+@media (max-width: 767px) {
+    .product-item {
+        padding: 1rem !important;
+    }
+
+    .product-item h3 {
+        font-size: 0.8rem;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+    }
+
+    .product-item .product-item__img-wrap,
+    .product-item .w-24 {
+        width: 4.5rem !important;
+        height: 4.5rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    #catalog-grid {
+        gap: 0.75rem;
+    }
+
+    #catalog-filters {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 0.5rem;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #catalog-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    #catalog-filters .catalog-filter {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+}
+
+/* Formulários e cards */
+@media (max-width: 767px) {
+    .bg-white.rounded-2xl.shadow-2xl,
+    .bg-white.rounded-2xl.shadow-xl {
+        padding: 1.25rem !important;
+    }
+}
+
+/* Blog */
+@media (max-width: 767px) {
+    .blog-article {
+        font-size: 1rem;
+    }
+
+    .blog-post-hero {
+        height: auto !important;
+        min-height: 220px;
+        padding-top: 2rem;
+    }
+
+    .blog-post-hero h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer */
+@media (max-width: 767px) {
+    footer .grid {
+        text-align: center;
+    }
+
+    footer .flex.md\\:justify-center,
+    footer .md\\:text-center,
+    footer .md\\:text-right {
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer .flex.md\\:justify-end {
+        justify-content: center;
+    }
+
+    footer .flex.items-start {
+        justify-content: center;
+    }
+}
+
+/* WhatsApp não cobre o menu */
+@media (max-width: 767px) {
+    body.mobile-menu-open .luzago-wa-widget {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* Mapa */
+@media (max-width: 767px) {
+    iframe[title*="Maps"],
+    iframe[title*="Localização"] {
+        height: 280px !important;
+    }
+}
+
+/* Grid de categorias na home — contém hover */
+#produtos .grid,
+#produtos > .w-full {
+    overflow-x: clip;
+}
+
+/* Utilitário screen reader */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

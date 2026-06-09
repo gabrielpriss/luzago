@@ -1,0 +1,87 @@
+/* Estilo Joinchat / Click to Chat — Luzago Alimentos */
+.luzago-wa-widget {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.luzago-wa-widget__btn {
+    background-color: #25D366;
+    color: #ffffff;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    line-height: 1;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
+    animation: luzago-wa-pulsar 1.5s infinite ease-in-out;
+    transition: background-color 0.2s ease;
+}
+
+.luzago-wa-widget:hover .luzago-wa-widget__btn {
+    background-color: #20bd5a;
+}
+
+.luzago-wa-widget__cta {
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 10px;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.35);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+    font-family: 'Noto Serif', serif;
+}
+
+.luzago-wa-widget:hover .luzago-wa-widget__cta {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes luzago-wa-pulsar {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 768px) {
+    .luzago-wa-widget {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .luzago-wa-widget__btn {
+        width: 60px;
+        height: 60px;
+        font-size: 34px;
+    }
+
+    .luzago-wa-widget__cta {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}

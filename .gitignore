@@ -1,0 +1,6 @@
+node_modules/
+.env
+.env.local
+*.py[co]
+__pycache__/
+.DS_Store

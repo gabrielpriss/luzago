@@ -1,0 +1,38 @@
+/* Correções AOS — evita barra de rolagem extra (overflow por transform) */
+
+/*
+ * O AOS padrão usa translate3d(0, 100px, 0) no fade-up.
+ * Transforms pintam fora do box e ampliam a área rolável da página.
+ */
+
+[data-aos="fade-up"] {
+    transform: translate3d(0, 28px, 0) !important;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+/* Animações laterais/zoom desativadas — causam overflow horizontal */
+[data-aos="fade-left"],
+[data-aos="fade-right"],
+[data-aos="slide-left"],
+[data-aos="slide-right"],
+[data-aos="zoom-in"],
+[data-aos="zoom-out"] {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Contém repintura das animações dentro do elemento */
+[data-aos] {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    max-width: 100%;
+}
+
+/* Seções com animação não expandem a largura da página */
+section,
+footer {
+    overflow-x: clip;
+}

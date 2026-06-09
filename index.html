@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzago Alimentos | Soluções em alimentos para o seu negócio</title>
+    <meta name="description" content="A Luzago Alimentos é uma distribuidora focada no mercado atacadista oferecendo soluções em grãos, temperos e ingredientes.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'luzago-green-dark': '#0f4c2c',
+                        'luzago-green': '#197c45',
+                        'luzago-red': '#d52b1e',
+                        'luzago-yellow': '#fbb034',
+                        'luzago-dark': '#2c2a29',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Serif', 'serif'],
+                        serif: ['Noto Serif', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 10; position: relative;}
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/imagens/hero-vegetais.png');
+            background-size: cover;
+            background-position: top;
+        }
+        
+        .empresa-bg {
+            background-image: linear-gradient(rgba(44, 42, 41, 0.85), rgba(44, 42, 41, 0.85)), url('/assets/imagens/hero-alimentos-variedade.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="/css/aos-fixes.css">
+    <link rel="stylesheet" href="/css/effects.css">
+    <link rel="stylesheet" href="/css/mobile-menu.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Top Bar -->
+    <div class="bg-luzago-green-dark text-white py-3 px-4 text-base hidden md:block">
+        <div class="container mx-auto max-w-6xl flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="tel:+554136687866" class="hover:text-gray-200 font-semibold transition text-base md:text-lg">(41) 3668-7866</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex gap-3">
+                    <a href="https://www.facebook.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Facebook Luzago" class="w-8 h-8 rounded-full bg-white text-luzago-green-dark flex items-center justify-center hover:bg-gray-200 transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="https://www.linkedin.com/company/luzagoalimentos/" target="_blank" rel="noopener" aria-label="LinkedIn Luzago" class="w-8 h-8 rounded-full bg-white text-luzago-green-dark flex items-center justify-center hover:bg-gray-200 transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                    <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Instagram Luzago" class="w-8 h-8 rounded-full bg-white text-luzago-green-dark flex items-center justify-center hover:bg-gray-200 transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                </div>
+                <a href="/catalogo/" class="btn btn--secondary btn--sm">Catálogo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto max-w-6xl px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/">
+                <img loading="eager" decoding="async" src="/assets/icones/logo-luzago.png" alt="Luzago Alimentos" class="h-16 md:h-20 object-contain">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-5 lg:gap-6 font-bold text-gray-800 text-sm lg:text-base">
+                <a href="/empresa/" class="inline-flex items-center leading-none hover:text-luzago-green transition">Empresa</a>
+                <a href="/blog/" class="inline-flex items-center leading-none hover:text-luzago-green transition">Blog</a>
+                <div class="relative group flex items-center">
+                    <a href="javascript:void(0)" class="inline-flex items-center gap-1 leading-none hover:text-luzago-green transition">Produtos <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 top-full pt-2 hidden group-hover:block z-50">
+                        <div class="w-64 bg-luzago-green-dark shadow-xl border-t-4 border-luzago-yellow">
+                        <ul class="py-2 text-white font-semibold text-sm">
+                            <li><a href="/temperos-e-condimentos/" class="block px-6 py-3 hover:bg-luzago-green transition">Temperos e Condimentos</a></li>
+                            <li><a href="/cereais/" class="block px-6 py-3 hover:bg-luzago-green transition">Cereais</a></li>
+                            <li><a href="/farinaceos/" class="block px-6 py-3 hover:bg-luzago-green transition">Farináceos</a></li>
+                            <li><a href="/frutas-secas-e-castanhas/" class="block px-6 py-3 hover:bg-luzago-green transition">Frutas Secas e Castanhas</a></li>
+                            <li><a href="/conservas/" class="block px-6 py-3 hover:bg-luzago-green transition">Conservas</a></li>
+                            <li><a href="/food-service/" class="block px-6 py-3 hover:bg-luzago-green transition">Food Service</a></li>
+                            <li><a href="/refrescos-e-sobremesas/" class="block px-6 py-3 hover:bg-luzago-green transition">Refrescos e Sobremesas</a></li>
+                            <li class="border-t border-white/20 mt-1 pt-1"><a href="/catalogo/" class="block px-6 py-3 hover:bg-luzago-green transition text-luzago-yellow">Ver catálogo completo</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="/trabalhe-conosco/#curriculo" class="inline-flex items-center leading-none hover:text-luzago-green transition">Trabalhe Conosco</a>
+                <a href="/trabalhe-conosco/#fornecedor" class="inline-flex items-center leading-none hover:text-luzago-green transition">Seja fornecedor</a>
+                <a href="#orcamento" class="btn btn--primary btn--sm">Solicite orçamento</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+                        <button type="button" class="mobile-menu-toggle md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu-panel">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[85vh] flex items-center justify-center text-center px-4 relative py-16">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <div class="mb-6">
+                <img loading="eager" decoding="async" src="/assets/icones/icone-folha-luzago.png" alt="Luzago Alimentos" class="h-20 md:h-28 w-auto object-contain drop-shadow-lg">
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight drop-shadow-md">
+                Distribuidora de alimentos para empresas<br class="hidden md:block"> do atacado e food service
+            </h1>
+            <p class="text-base md:text-xl text-white/90 mt-5 max-w-2xl leading-relaxed drop-shadow">
+                Temperos, grãos, farináceos, conservas e mais de 500 itens selecionados para abastecer o seu negócio com qualidade e agilidade.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                <a href="#orcamento" class="btn btn--primary">
+                    Solicite seu orçamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Linha de Produtos Section -->
+    <section id="produtos" class="pt-16 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 text-center max-w-6xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-luzago-green-dark uppercase mb-10 tracking-wide">
+                Conheça nossa linha de<br>produtos
+            </h2>
+        </div>
+        
+        <div class="w-full">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 w-full">
+                <!-- Categoria 1 -->
+                <a href="/temperos-e-condimentos/" class="product-card bg-luzago-yellow p-6 flex flex-col items-center justify-center text-center aspect-square md:aspect-auto md:h-48 cursor-pointer block">
+                    <img loading="lazy" decoding="async" src="/assets/icones/categoria-temperos.svg" alt="Temperos" class="w-12 h-12 mb-3 invert">
+                    <h3 class="text-white font-bold text-sm leading-tight">Temperos e<br>Condimentos</h3>
+                </a>
+                <!-- Categoria 2 -->
+                <a href="/cereais/" class="product-card bg-luzago-red p-6 flex flex-col items-center justify-center text-center aspect-square md:aspect-auto md:h-48 cursor-pointer block">
+                    <img loading="lazy" decoding="async" src="/assets/icones/categoria-cereais.svg" alt="Cereais" class="w-12 h-12 mb-3 invert">
+                    <h3 class="text-white font-bold text-sm leading-tight">Cereais</h3>
+                </a>
+                <!-- Categoria 3 -->
+                <a href="/farinaceos/" class="product-card bg-luzago-green-dark p-6 flex flex-col items-center justify-center text-center aspect-square md:aspect-auto md:h-48 cursor-pointer block">
+                    <img loading="lazy" decoding="async" src="/assets/icones/categoria-farinaceos.svg" alt="Farináceos" class="w-12 h-12 mb-3 invert">
+                    <h3 class="text-white font-bold text-sm leading-tight">Farináceos</h3>
+                </a>
+                <!-- Categoria 4 -->
+                <a href="/frutas-secas-e-castanhas/" class="product-card bg-luzago-yellow p-6 flex flex-col items-center justify-center text-center aspect-square md:aspect-auto md:h-48 cursor-pointer block">
+                    <img loading="lazy" decoding="async" src="/assets/icones/categoria-frutas-secas.svg" alt="Frutas secas e castanhas" class="w-12 h-12 mb-3 invert">
+                    <h3 class="text-white font-bold text-sm leading-tight">Frutas secas e<br>castanhas</h3>
+                </a>
+                <!-- Categoria 5 -->
+                <a href="/conservas/" class="product-card bg-luzago-red p-6 flex flex-col items-center justify-center text-center aspect-square md:aspect-auto md:h-48 cursor-pointer block">
+                    <img loading="lazy" decoding="async" src="/assets/icones/categoria-conservas.svg" alt="Conservas" class="w-12 h-12 mb-3 invert">
+                    <h3 class="text-white font-bold text-sm leading-tight">Conservas</h3>
+                </a>
+                <!-- Categoria 6 -->
+                <a href="/refrescos-e-sobremesas/" class="product-card bg-luzago-green-dark p-6 flex flex-col items-center justify-center text-center aspect-square md:aspect-auto md:h-48 cursor-pointer block">
+                    <img loading="lazy" decoding="async" src="/assets/icones/categoria-refrescos-sobremesas.svg" alt="Refrescos e sobremesas" class="w-12 h-12 mb-3 invert">
+                    <h3 class="text-white font-bold text-sm leading-tight">Refrescos e<br>sobremesas</h3>
+                </a>
+                <!-- Categoria 7 -->
+                <a href="/food-service/" class="product-card bg-luzago-yellow p-6 flex flex-col items-center justify-center text-center aspect-square md:aspect-auto md:h-48 cursor-pointer col-span-2 md:col-span-1 block">
+                    <img loading="lazy" decoding="async" src="/assets/icones/categoria-food-service.svg" alt="Food Service" class="w-12 h-12 mb-3 invert">
+                    <h3 class="text-white font-bold text-sm leading-tight">Food Service</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pré-orçamento -->
+    <section id="orcamento" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-luzago-green-dark mb-3">Solicite seu pré-orçamento</h2>
+                <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+                    Preencha os dados abaixo para qualificarmos seu pedido. Fornecedores e candidatos devem usar a página
+                    <a href="/trabalhe-conosco/" class="text-luzago-red font-semibold hover:underline">Trabalhe Conosco</a>.
+                </p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-gray-100">
+                <form data-lead-form="comercial" class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label for="home-empresa" class="block text-sm font-semibold text-gray-800 mb-1">Nome da empresa <span class="text-luzago-red">*</span></label>
+                            <input type="text" id="home-empresa" name="empresa" placeholder="Digite o nome da empresa" required class="w-full border border-gray-200 rounded px-4 py-3 bg-white text-sm focus:outline-none focus:border-luzago-green transition">
+                        </div>
+                        <div>
+                            <label for="home-categoria" class="block text-sm font-semibold text-gray-800 mb-1 lowercase">categorias de produtos</label>
+                            <select id="home-categoria" name="categoria" class="w-full border border-[#B8D8EB] rounded px-4 py-3 bg-white text-gray-500 text-sm focus:outline-none focus:border-luzago-green transition">
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="temperos">Temperos e condimentos</option>
+                                <option value="cereais">Cereais</option>
+                                <option value="farinaceos">Farináceos</option>
+                                <option value="frutas-secas">Frutas secas e castanhas</option>
+                                <option value="conservas">Conservas</option>
+                                <option value="food-service">Food Service</option>
+                                <option value="refrescos">Refrescos e sobremesas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label for="home-email" class="block text-sm font-semibold text-gray-800 mb-1">E-mail <span class="text-luzago-red">*</span></label>
+                            <input type="email" id="home-email" name="email" placeholder="Seu e-mail" required class="w-full border border-gray-200 rounded px-4 py-3 bg-white text-sm focus:outline-none focus:border-luzago-green transition">
+                        </div>
+                        <div>
+                            <label for="home-telefone" class="block text-sm font-semibold text-gray-800 mb-1">Telefone <span class="text-luzago-red">*</span></label>
+                            <input type="tel" id="home-telefone" name="telefone" placeholder="Telefone para contato" required class="w-full border border-gray-200 rounded px-4 py-3 bg-white text-sm focus:outline-none focus:border-luzago-green transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="home-produtos" class="block text-sm font-semibold text-gray-800 mb-1">Produtos desejados <span class="text-luzago-red">*</span></label>
+                        <textarea id="home-produtos" name="produtos" rows="4" placeholder="Descreva os produtos ou categorias de interesse" required class="w-full border border-gray-200 rounded px-4 py-3 bg-white text-sm resize-none focus:outline-none focus:border-luzago-green transition"></textarea>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                        <button type="submit" class="btn btn--primary btn--block">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empresa Section -->
+    <section id="empresa" class="empresa-bg py-20 text-white relative">
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 uppercase tracking-widest">Sobre a empresa</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Text -->
+                <div class="text-gray-200 text-sm md:text-base leading-relaxed text-justify md:text-left space-y-4">
+                    <p>
+                        A Luzago Alimentos é uma distribuidora de alimentos focada no mercado atacadista que oferece atendimento diferenciado e um produto altamente selecionado.
+                    </p>
+                    <p>
+                        A empresa se desenvolveu acompanhando a necessidade de seus clientes, oferecendo soluções que aliam inovação, qualidade, rapidez e estoque garantido. Possui parcerias com grandes produtores e fornecedores nacionais e internacionais.
+                    </p>
+                    <p>
+                        Atendemos empresas que precisam de temperos, grãos, farináceos, conservas, refrescos e itens para food service — com embalagens variadas e entregas programadas na região.
+                    </p>
+                </div>
+                
+                <!-- Images Carousel -->
+                <div class="relative w-full max-w-sm md:max-w-md mx-auto aspect-square overflow-hidden rounded-lg shadow-2xl border-4 border-luzago-yellow/40">
+                    <div id="empresa-carousel-track" class="flex h-full w-full transition-transform duration-700 ease-in-out">
+                        <div class="w-full h-full flex-shrink-0">
+                            <img loading="lazy" decoding="async" src="/assets/imagens/hero-vegetais.png" alt="Fachada Luzago" class="img-lazy w-full h-full object-cover aspect-square">
+                        </div>
+                        <div class="w-full h-full flex-shrink-0">
+                            <img loading="lazy" decoding="async" src="/assets/imagens/interior-armazem.png" alt="Interior do armazém" class="img-lazy w-full h-full object-cover aspect-square">
+                        </div>
+                        <div class="w-full h-full flex-shrink-0">
+                            <img loading="lazy" decoding="async" src="/assets/imagens/estoque-sacarias.png" alt="Estoque de sacarias" class="img-lazy w-full h-full object-cover aspect-square">
+                        </div>
+                        <div class="w-full h-full flex-shrink-0">
+                            <img loading="lazy" decoding="async" src="/assets/imagens/maquina-empacotamento.png" alt="Máquina de empacotamento" class="img-lazy w-full h-full object-cover aspect-square">
+                        </div>
+                    </div>
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" onclick="goToSlide(0)"></button>
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" onclick="goToSlide(1)"></button>
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" onclick="goToSlide(2)"></button>
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" onclick="goToSlide(3)"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center gap-4 mt-12">
+                <a href="/empresa/" class="btn btn--secondary">Conheça mais</a>
+                <a href="#orcamento" class="btn btn--primary">Solicite orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-luzago-green-dark">Siga-nos no Instagram</h2>
+                    <p class="text-gray-600 text-sm mt-2">Acompanhe novidades, produtos e o dia a dia da Luzago.</p>
+                </div>
+                <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-luzago-green text-white font-bold py-2.5 px-6 rounded hover:bg-luzago-green-dark transition text-sm">
+                    <i class="fa-brands fa-instagram"></i> @luzagoalimentos
+                </a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" class="aspect-square overflow-hidden rounded-lg shadow hover:opacity-90 transition group relative">
+                    <img loading="lazy" decoding="async" src="/assets/imagens/hero-vegetais.png" alt="Produtos e fachada Luzago Alimentos no Instagram" class="img-lazy w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fa-brands fa-instagram text-2xl"></i></span>
+                </a>
+                <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" class="aspect-square overflow-hidden rounded-lg shadow hover:opacity-90 transition group relative">
+                    <img loading="lazy" decoding="async" src="/assets/imagens/interior-armazem.png" alt="Interior do armazém Luzago no Instagram" class="img-lazy w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fa-brands fa-instagram text-2xl"></i></span>
+                </a>
+                <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" class="aspect-square overflow-hidden rounded-lg shadow hover:opacity-90 transition group relative">
+                    <img loading="lazy" decoding="async" src="/assets/imagens/estoque-sacarias.png" alt="Estoque de sacarias Luzago no Instagram" class="img-lazy w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fa-brands fa-instagram text-2xl"></i></span>
+                </a>
+                <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" class="aspect-square overflow-hidden rounded-lg shadow hover:opacity-90 transition group relative hidden md:block">
+                    <img loading="lazy" decoding="async" src="/assets/imagens/maquina-empacotamento.png" alt="Linha de empacotamento Luzago no Instagram" class="img-lazy w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fa-brands fa-instagram text-2xl"></i></span>
+                </a>
+                <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" class="aspect-square overflow-hidden rounded-lg shadow hover:opacity-90 transition group relative hidden lg:block">
+                    <img loading="lazy" decoding="async" src="/assets/imagens/hero-alimentos-variedade.jpeg" alt="Variedade de alimentos Luzago no Instagram" class="img-lazy w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fa-brands fa-instagram text-2xl"></i></span>
+                </a>
+                <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" class="aspect-square overflow-hidden rounded-lg shadow hover:opacity-90 transition group relative hidden lg:block">
+                    <img loading="lazy" decoding="async" src="/assets/imagens/hero-vegetais.png" alt="Produtos e fachada Luzago Alimentos no Instagram" class="img-lazy w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fa-brands fa-instagram text-2xl"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-luzago-green mb-3">Avaliações no Google</h2>
+            <p class="text-gray-600 text-sm mb-10">O que nossos clientes dizem sobre a Luzago Alimentos</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
+                <!-- Geral -->
+                <div class="bg-white rounded-lg shadow border border-gray-100 p-6 flex flex-col items-center w-full md:w-64 transform hover:scale-105 transition">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">BOM</h3>
+                    <div class="flex text-yellow-400 text-xl mb-1">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-500 text-xs mb-3">Com base em <strong>28 avaliações</strong></p>
+                    <img loading="lazy" decoding="async" src="/assets/icones/icone-google.svg" alt="Google" class="h-6 opacity-70">
+                </div>
+                
+                <!-- Avaliação 1 -->
+                <div class="bg-white rounded-lg shadow border border-gray-100 p-6 text-left w-full md:w-72">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full overflow-hidden">
+                            <img loading="lazy" decoding="async" src="/assets/icones/avatar-arthur-alexandre.png" alt="Arthur Alexandre" class="img-lazy w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800 flex items-center gap-1">Arthur Alexandre <img loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Conta verificada no Google" class="w-3 h-3"></h4>
+                            <p class="text-gray-400 text-xs">1 ano atrás</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 text-xs mb-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm">O Motorista Cleomar sempre bem humorado nota 10 de pessoa e atendimento</p>
+                </div>
+
+                <!-- Avaliação 2 -->
+                <div class="bg-white rounded-lg shadow border border-gray-100 p-6 text-left w-full md:w-72">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full overflow-hidden">
+                            <img loading="lazy" decoding="async" src="/assets/icones/avatar-luanny-scalada.png" alt="Luanny Scalada" class="img-lazy w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800 flex items-center gap-1">Luanny Scalada <img loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Conta verificada no Google" class="w-3 h-3"></h4>
+                            <p class="text-gray-400 text-xs">3 anos atrás</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 text-xs mb-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm">Excelente empresa curitibana com excelência em atendimento e alimentos de qualidade.</p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <a href="https://www.google.com/maps/place/?cid=8370212234163883768" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-luzago-green font-bold hover:text-luzago-green-dark transition text-sm">
+                    <img loading="lazy" decoding="async" src="/assets/icones/icone-google.svg" alt="Google" class="h-5"> Ver todas as avaliações no Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Section -->
+    <section class="relative">
+        <div class="h-[450px] w-full bg-gray-200 relative">
+            <iframe 
+                title="Luzago Alimentos — Curitiba e Região Metropolitana"
+                src="https://maps.google.com/maps?q=Luzago+Alimentos&cid=8370212234163883768&hl=pt-BR&z=10&output=embed"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="absolute inset-0">
+            </iframe>
+        </div>
+        <div class="bg-luzago-green-dark text-white text-center py-4 text-sm px-4">
+            <p class="font-semibold text-base mb-1">Atendemos Curitiba e Região Metropolitana</p>
+            <a href="https://www.google.com/maps/place/?cid=8370212234163883768" target="_blank" rel="noopener" class="hover:underline inline-flex items-center justify-center gap-2">
+                <i class="fa-solid fa-location-dot"></i> Ver no Google Meu Negócio — Rua Alto Paraná, 1645, Pinhais - PR
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-luzago-dark text-gray-300">
+        <div class="container mx-auto px-4 max-w-6xl py-12 grid md:grid-cols-3 gap-10">
+            
+            <!-- Missão -->
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">MISSÃO</h3>
+                <p class="text-sm text-gray-400 leading-relaxed text-justify">
+                    Distribuir produtos de excelente qualidade agregando valor ao atendimento personalizado, buscando sempre a satisfação de nossos clientes.
+                </p>
+            </div>
+            
+            <!-- Siga-nos & Contato -->
+            <div class="flex flex-col md:items-center">
+                <div class="mb-6 w-full md:text-center">
+                    <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">siga-nos</h3>
+                    <div class="flex gap-3 md:justify-center">
+                                                <a href="https://www.facebook.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Facebook Luzago" class="w-8 h-8 rounded-full bg-luzago-green text-white flex items-center justify-center hover:bg-luzago-green-dark transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/luzagoalimentos/" target="_blank" rel="noopener" aria-label="LinkedIn Luzago" class="w-8 h-8 rounded-full bg-luzago-green text-white flex items-center justify-center hover:bg-luzago-green-dark transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Instagram Luzago" class="w-8 h-8 rounded-full bg-luzago-green text-white flex items-center justify-center hover:bg-luzago-green-dark transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+                                                                                <div class="w-full md:text-center text-sm">
+                    <p class="mb-1 flex items-center md:justify-center gap-2"><i class="fa-solid fa-phone"></i> (41) 3668-7866</p>
+                    <p class="mb-4 flex items-center md:justify-center gap-2"><i class="fa-solid fa-envelope"></i> sac@luzagoalimentos.com.br</p>
+                    <a href="https://wa.me/554136687866?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Luzago%20Alimentos%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-5 rounded transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Fale no WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Endereço -->
+            <div class="md:text-right">
+                <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">endereço</h3>
+                <div class="text-sm text-gray-400">
+                    <p class="flex md:justify-end gap-2 items-start"><i class="fa-solid fa-location-dot mt-1"></i> Rua Alto Paraná, 1645<br>CEP: 83325-045<br>Pinhais - PR</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="bg-luzago-green-dark py-4 text-xs">
+            <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row justify-between items-center text-gray-300">
+                <p>© Luzago 2024 , todos os direitos reservados</p>
+                <p class="mt-2 md:mt-0">Desenvolvido por <a href="#" class="text-white hover:underline">Conceito Prime Marketing Digital</a></p>
+            </div>
+        </div>
+    </footer>
+<script src="/js/runtime-config.js"></script>
+    <script src="/js/leads.js"></script>
+
+    <!-- Carousel Loop Script -->
+    <script>
+        let currentEmpresaSlide = 0;
+        const empresaTrack = document.getElementById('empresa-carousel-track');
+        const empresaDots = document.querySelectorAll('.carousel-dot');
+        const totalEmpresaSlides = 4;
+
+        function updateEmpresaCarousel() {
+            if (empresaTrack) {
+                empresaTrack.style.transform = `translateX(-${currentEmpresaSlide * 100}%)`;
+                empresaDots.forEach((dot, idx) => {
+                    if (idx === currentEmpresaSlide) {
+                        dot.classList.remove('bg-white/50');
+                        dot.classList.add('bg-white');
+                    } else {
+                        dot.classList.remove('bg-white');
+                        dot.classList.add('bg-white/50');
+                    }
+                });
+            }
+        }
+
+        function goToSlide(index) {
+            currentEmpresaSlide = index;
+            updateEmpresaCarousel();
+        }
+
+        function nextEmpresaSlide() {
+            currentEmpresaSlide = (currentEmpresaSlide + 1) % totalEmpresaSlides;
+            updateEmpresaCarousel();
+        }
+
+        // Auto play carousel every 3 seconds
+        let empresaInterval = setInterval(nextEmpresaSlide, 3000);
+
+        // Reset auto play on manual dot click
+        empresaDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(empresaInterval);
+                goToSlide(index);
+                empresaInterval = setInterval(nextEmpresaSlide, 3500);
+            });
+        });
+
+        // Initialize state
+        updateEmpresaCarousel();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/mobile-menu.js"></script>
+    <script src="/js/site-effects.js"></script>
+
+</body>
+</html>

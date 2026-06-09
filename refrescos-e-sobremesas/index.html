@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzago Alimentos | Soluções em alimentos para o seu negócio</title>
+    <meta name="description" content="A Luzago Alimentos é uma distribuidora focada no mercado atacadista oferecendo soluções em grãos, temperos e ingredientes.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'luzago-green-dark': '#0f4c2c',
+                        'luzago-green': '#197c45',
+                        'luzago-red': '#d52b1e',
+                        'luzago-yellow': '#fbb034',
+                        'luzago-dark': '#2c2a29',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Serif', 'serif'],
+                        serif: ['Noto Serif', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 10; position: relative;}
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/imagens/hero-vegetais.png');
+            background-size: cover;
+            background-position: top;
+        }
+        
+        .empresa-bg {
+            background-image: linear-gradient(rgba(44, 42, 41, 0.85), rgba(44, 42, 41, 0.85)), url('/assets/imagens/hero-alimentos-variedade.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .refrescos-hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/imagens/hero-alimentos-variedade.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="/css/aos-fixes.css">
+    <link rel="stylesheet" href="/css/effects.css">
+    <link rel="stylesheet" href="/css/mobile-menu.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Top Bar -->
+    <div class="bg-luzago-green-dark text-white py-3 px-4 text-base hidden md:block">
+        <div class="container mx-auto max-w-6xl flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="tel:+554136687866" class="hover:text-gray-200 font-semibold transition text-base md:text-lg">(41) 3668-7866</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex gap-3">
+                                        <a href="https://www.facebook.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Facebook Luzago" class="w-8 h-8 rounded-full bg-white text-luzago-green-dark flex items-center justify-center hover:bg-gray-200 transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="https://www.linkedin.com/company/luzagoalimentos/" target="_blank" rel="noopener" aria-label="LinkedIn Luzago" class="w-8 h-8 rounded-full bg-white text-luzago-green-dark flex items-center justify-center hover:bg-gray-200 transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                    <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Instagram Luzago" class="w-8 h-8 rounded-full bg-white text-luzago-green-dark flex items-center justify-center hover:bg-gray-200 transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                </div>
+                <a href="/catalogo/" class="btn btn--secondary btn--sm">Catálogo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto max-w-6xl px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/">
+                <img loading="eager" decoding="async" src="/assets/icones/logo-luzago.png" alt="Luzago Alimentos" class="h-16 md:h-20 object-contain">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-5 lg:gap-6 font-bold text-gray-800 text-sm lg:text-base">
+                <a href="/empresa/" class="inline-flex items-center leading-none hover:text-luzago-green transition">Empresa</a>
+                <a href="/blog/" class="inline-flex items-center leading-none hover:text-luzago-green transition">Blog</a>
+                <div class="relative group flex items-center">
+                    <a href="javascript:void(0)" class="inline-flex items-center gap-1 leading-none hover:text-luzago-green transition">Produtos <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <!-- Dropdown -->
+                    <div class="absolute left-0 top-full pt-2 hidden group-hover:block z-50">
+                        <div class="w-64 bg-luzago-green-dark shadow-xl border-t-4 border-luzago-yellow">
+                        <ul class="py-2 text-white font-semibold text-sm">
+                            <li><a href="/temperos-e-condimentos/" class="block px-6 py-3 hover:bg-luzago-green transition">Temperos e Condimentos</a></li>
+                            <li><a href="/cereais/" class="block px-6 py-3 hover:bg-luzago-green transition">Cereais</a></li>
+                            <li><a href="/farinaceos/" class="block px-6 py-3 hover:bg-luzago-green transition">Farináceos</a></li>
+                            <li><a href="/frutas-secas-e-castanhas/" class="block px-6 py-3 hover:bg-luzago-green transition">Frutas Secas e Castanhas</a></li>
+                            <li><a href="/conservas/" class="block px-6 py-3 hover:bg-luzago-green transition">Conservas</a></li>
+                            <li><a href="/food-service/" class="block px-6 py-3 hover:bg-luzago-green transition">Food Service</a></li>
+                            <li><a href="/refrescos-e-sobremesas/" class="block px-6 py-3 hover:bg-luzago-green transition">Refrescos e Sobremesas</a></li>
+                            <li class="border-t border-white/20 mt-1 pt-1"><a href="/catalogo/" class="block px-6 py-3 hover:bg-luzago-green transition text-luzago-yellow">Ver catálogo completo</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="/trabalhe-conosco/#curriculo" class="inline-flex items-center leading-none hover:text-luzago-green transition">Trabalhe Conosco</a>
+                <a href="/trabalhe-conosco/#fornecedor" class="inline-flex items-center leading-none hover:text-luzago-green transition">Seja fornecedor</a>
+                <a href="/contato/" class="btn btn--primary btn--sm">Solicite orçamento</a>
+
+            </nav>
+
+            <!-- Mobile Menu Button -->
+                        <button type="button" class="mobile-menu-toggle md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu-panel">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+    <!-- Hero -->
+    <section class="refrescos-hero-bg h-[300px] md:h-[400px] flex items-center justify-center text-center px-4 relative mt-[72px] md:mt-0">
+        <div class="flex flex-col items-center">
+            <img loading="lazy" decoding="async" src="/assets/icones/categoria-refrescos-sobremesas.svg" alt="Refrescos e Sobremesas" class="w-12 h-12 md:w-16 md:h-16 mb-4 object-contain invert">
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-wide">Refrescos e Sobremesas</h1>
+        </div>
+    </section>
+
+    
+    <!-- Products Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/acucar-de-coco.jpeg" alt="Açúcar de Coco" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Açúcar de Coco</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>100g | 1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/canjica-branca.jpeg" alt="Canjica Branca" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Canjica Branca</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>Saca 25Kg | 500g</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/acucar-mascavo.jpeg" alt="AÇUCAR MASCAVO" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">AÇUCAR MASCAVO</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/flocos-de-milho-com-acucar.jpeg" alt="Flocos de Milho com Açúcar" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Flocos de Milho com Açúcar</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg | 10Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/cereal-chokos.jpeg" alt="Cereal Chokos" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Cereal Chokos</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1005Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/acucar-refinado.png" alt="Açúcar Refinado" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Açúcar Refinado</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg | 5Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-de-framboesa.jpeg" alt="Gelatina de Framboesa" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina de Framboesa</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-abacaxi.jpeg" alt="Gelatina Abacaxi" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina Abacaxi</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-cereja.jpeg" alt="Gelatina Cereja" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina Cereja</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/chocolate-em-po-50-cacau.jpeg" alt="Chocolate em Pó 50% Cacau" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Chocolate em Pó 50% Cacau</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg | 10Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-de-morango.jpeg" alt="Gelatina de Morango" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina de Morango</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-de-uva.jpeg" alt="Gelatina de Uva" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina de Uva</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/granola-tradicional.jpeg" alt="Granola Tradicional" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Granola Tradicional</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-de-pessego.jpeg" alt="Gelatina de Pessêgo" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina de Pessêgo</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/cereal-colorido.jpeg" alt="Cereal Colorido" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Cereal Colorido</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-incolor.jpeg" alt="Gelatina Incolor" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina Incolor</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>100g | 1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/granulado-preto.jpeg" alt="Granulado Preto" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Granulado Preto</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>100g | 101Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/refresco-de-laranja.jpeg" alt="Refresco de Laranja" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Refresco de Laranja</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>500g | 1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/gelatina-de-limao.jpeg" alt="Gelatina de Limão" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gelatina de Limão</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/sagu.jpeg" alt="Sagu" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Sagu</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>500g | 1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/xilitol.jpeg" alt="Xilitol" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Xilitol</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/refresco-de-limao.jpeg" alt="Refresco Limão" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Refresco Limão</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/flocos-de-milho-sem-acucar.jpeg" alt="Flocos de Milho sem Açúcar" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Flocos de Milho sem Açúcar</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>Caixa - 8 Kg | 1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/refresco-de-maracuja.jpeg" alt="Refresco de Maracujá" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Refresco de Maracujá</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/refresco-de-abacaxi.jpeg" alt="Refresco de Abacaxi" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Refresco de Abacaxi</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+                                <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
+                        <img loading="lazy" decoding="async" src="/assets/refrescos-e-sobremesas/acucar-demerara.jpeg" alt="Açúcar Demerara" class="img-lazy w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Açúcar Demerara</h3>
+                    <div class="mt-auto w-full">
+                        <p class='text-xs text-gray-500 font-bold mb-1 uppercase tracking-wider'>DISPONÍVEL EM:</p><p class='text-sm text-gray-700 font-semibold'>1Kg</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-12 text-center border-t border-gray-200 pt-8">
+                <p class="text-gray-600 mb-4">Procurando outro produto em Refrescos e Sobremesas? Entre em contato conosco.</p>
+                <a href="/contato/" class="btn btn--secondary">Falar com Consultor</a>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer class="bg-luzago-dark text-gray-300">
+        <div class="container mx-auto px-4 max-w-6xl py-12 grid md:grid-cols-3 gap-10">
+            
+            <!-- Missão -->
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">MISSÃO</h3>
+                <p class="text-sm text-gray-400 leading-relaxed text-justify">
+                    Distribuir produtos de excelente qualidade agregando valor ao atendimento personalizado, buscando sempre a satisfação de nossos clientes.
+                </p>
+            </div>
+            
+            <!-- Siga-nos & Contato -->
+            <div class="flex flex-col md:items-center">
+                <div class="mb-6 w-full md:text-center">
+                    <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">siga-nos</h3>
+                    <div class="flex gap-3 md:justify-center">
+                                                <a href="https://www.facebook.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Facebook Luzago" class="w-8 h-8 rounded-full bg-luzago-green text-white flex items-center justify-center hover:bg-luzago-green-dark transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/luzagoalimentos/" target="_blank" rel="noopener" aria-label="LinkedIn Luzago" class="w-8 h-8 rounded-full bg-luzago-green text-white flex items-center justify-center hover:bg-luzago-green-dark transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/luzagoalimentos/" target="_blank" rel="noopener" aria-label="Instagram Luzago" class="w-8 h-8 rounded-full bg-luzago-green text-white flex items-center justify-center hover:bg-luzago-green-dark transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+                                                                                <div class="w-full md:text-center text-sm">
+                    <p class="mb-1 flex items-center md:justify-center gap-2"><i class="fa-solid fa-phone"></i> (41) 3668-7866</p>
+                    <p class="mb-4 flex items-center md:justify-center gap-2"><i class="fa-solid fa-envelope"></i> sac@luzagoalimentos.com.br</p>
+                    <a href="https://wa.me/554136687866?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Luzago%20Alimentos%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-5 rounded transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Fale no WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Endereço -->
+            <div class="md:text-right">
+                <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">endereço</h3>
+                <div class="text-sm text-gray-400">
+                    <p class="flex md:justify-end gap-2 items-start"><i class="fa-solid fa-location-dot mt-1"></i> Rua Alto Paraná, 1645<br>CEP: 83325-045<br>Pinhais - PR</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="bg-luzago-green-dark py-4 text-xs">
+            <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row justify-between items-center text-gray-300">
+                <p>© Luzago 2024 , todos os direitos reservados</p>
+                <p class="mt-2 md:mt-0">Desenvolvido por <a href="#" class="text-white hover:underline">Conceito Prime Marketing Digital</a></p>
+            </div>
+        </div>
+    </footer>
+<!-- Carousel Loop Script -->
+    <script>
+        let currentEmpresaSlide = 0;
+        const empresaTrack = document.getElementById('empresa-carousel-track');
+        const empresaDots = document.querySelectorAll('.carousel-dot');
+        const totalEmpresaSlides = 4;
+
+        function updateEmpresaCarousel() {
+            if (empresaTrack) {
+                empresaTrack.style.transform = `translateX(-${currentEmpresaSlide * 100}%)`;
+                empresaDots.forEach((dot, idx) => {
+                    if (idx === currentEmpresaSlide) {
+                        dot.classList.remove('bg-white/50');
+                        dot.classList.add('bg-white');
+                    } else {
+                        dot.classList.remove('bg-white');
+                        dot.classList.add('bg-white/50');
+                    }
+                });
+            }
+        }
+
+        function goToSlide(index) {
+            currentEmpresaSlide = index;
+            updateEmpresaCarousel();
+        }
+
+        function nextEmpresaSlide() {
+            currentEmpresaSlide = (currentEmpresaSlide + 1) % totalEmpresaSlides;
+            updateEmpresaCarousel();
+        }
+
+        // Auto play carousel every 3 seconds
+        let empresaInterval = setInterval(nextEmpresaSlide, 3000);
+
+        // Reset auto play on manual dot click
+        empresaDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(empresaInterval);
+                goToSlide(index);
+                empresaInterval = setInterval(nextEmpresaSlide, 3500);
+            });
+        });
+
+        // Initialize state
+        updateEmpresaCarousel();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/mobile-menu.js"></script>
+    <script src="/js/site-effects.js"></script>
+
+</body>
+</html>

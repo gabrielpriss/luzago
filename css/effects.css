@@ -1,0 +1,211 @@
+/* Efeitos visuais — lazy load, hover e animações — Luzago Alimentos */
+
+/* ── Lazy load com fade-in ── */
+.img-lazy {
+    opacity: 0;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.img-lazy.is-loaded {
+    opacity: 1;
+}
+
+/* ── Cards de categoria (home) ── */
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgb(0 0 0 / 0.15));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+.product-card:hover img {
+    transform: scale(1.12) rotate(-3deg);
+}
+
+.product-card img {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Grid de produtos (categorias + catálogo) ── */
+.product-item,
+.catalog-item {
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.product-item:hover,
+.catalog-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(0 0 0 / 0.1);
+    border-color: #197c45;
+}
+
+.product-item .product-item__img-wrap,
+.catalog-item .product-item__img-wrap {
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.product-item:hover .product-item__img-wrap,
+.catalog-item:hover .product-item__img-wrap {
+    border-color: #fbb034;
+}
+
+.product-item:hover img,
+.catalog-item:hover img {
+    transform: scale(1.1);
+}
+
+.product-item img,
+.catalog-item img {
+    transition: transform 0.4s ease;
+}
+
+/* ── Blog ── */
+.blog-card:hover .blog-card__image {
+    transform: scale(1.06);
+}
+
+.blog-card .blog-card__image {
+    transition: transform 0.45s ease;
+}
+
+.blog-related-card:hover {
+    transform: translateX(4px);
+}
+
+/* ── Instagram ── */
+.instagram-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 28px rgb(0 0 0 / 0.18);
+}
+
+.instagram-card img {
+    transition: transform 0.5s ease;
+}
+
+.instagram-card:hover img {
+    transform: scale(1.1);
+}
+
+/* ── Avaliações ── */
+.review-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 14px 30px rgb(0 0 0 / 0.1);
+}
+
+/* ── Botões (reforço) ── */
+.btn:hover {
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.18);
+}
+
+.btn--primary:hover {
+    box-shadow: 0 8px 24px rgb(213 43 30 / 0.35);
+}
+
+.btn--secondary:hover {
+    box-shadow: 0 8px 24px rgb(251 176 52 / 0.4);
+}
+
+/* ── Ícones sociais ── */
+.social-icon {
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 16px rgb(0 0 0 / 0.15);
+}
+
+/* ── Links de navegação ── */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #197c45;
+    transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ── Formulários ── */
+input:not([type="file"]):hover,
+select:hover,
+textarea:hover {
+    border-color: #197c45;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgb(25 124 69 / 0.15);
+}
+
+/* ── Carrossel empresa ── */
+.carousel-shell {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-shell:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 0.25);
+}
+
+/* ── WhatsApp widget ── */
+.luzago-wa-widget__btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.luzago-wa-widget:hover .luzago-wa-widget__btn {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgb(37 211 102 / 0.45);
+}
+
+/* ── Acessibilidade: reduzir movimento ── */
+@media (prefers-reduced-motion: reduce) {
+    .img-lazy,
+    .product-card,
+    .product-item,
+    .catalog-item,
+    .blog-card,
+    .instagram-card,
+    .review-card,
+    .btn,
+    .social-icon {
+        transition: none !important;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

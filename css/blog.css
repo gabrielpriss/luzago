@@ -1,0 +1,112 @@
+/* Blog — Luzago Alimentos */
+
+.blog-hero {
+    background-image: linear-gradient(rgba(15, 76, 44, 0.88), rgba(15, 76, 44, 0.92)), url('/assets/imagens/hero-alimentos-variedade.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(0 0 0 / 0.12);
+}
+
+.blog-card__image {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.blog-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.125rem;
+    background-color: #fbb034;
+    color: #2c2a29;
+}
+
+.blog-breadcrumb a {
+    color: rgb(255 255 255 / 0.75);
+    transition: color 0.2s ease;
+}
+
+.blog-breadcrumb a:hover {
+    color: #fff;
+}
+
+.blog-article {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: #374151;
+}
+
+.blog-article h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f4c2c;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-article h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #197c45;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-article p {
+    margin-bottom: 1.25rem;
+}
+
+.blog-article ul,
+.blog-article ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+
+.blog-article li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-article blockquote {
+    border-left: 4px solid #fbb034;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    background-color: #f9fafb;
+    font-style: italic;
+    color: #4b5563;
+}
+
+.blog-article a {
+    color: #d52b1e;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.blog-article a:hover {
+    color: #b91c1c;
+}
+
+.blog-post-hero {
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-related-card {
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.blog-related-card:hover {
+    border-color: #197c45;
+    background-color: #f0fdf4;
+}

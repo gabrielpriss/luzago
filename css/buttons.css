@@ -1,0 +1,72 @@
+/* Botões padronizados — Luzago Alimentos */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn--primary {
+    background-color: #d52b1e;
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: #b91c1c;
+}
+
+.btn--secondary {
+    background-color: #fbb034;
+    color: #2c2a29;
+}
+
+.btn--secondary:hover {
+    background-color: #eab308;
+}
+
+.btn--sm {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.btn--block {
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .btn--block {
+        width: auto;
+    }
+}
+
+.btn.is-active {
+    box-shadow: 0 0 0 2px rgb(255 255 255 / 0.5), 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+header .btn.is-active {
+    box-shadow: 0 0 0 2px rgb(213 43 30 / 0.35), 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
