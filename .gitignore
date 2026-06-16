@@ -1,6 +1,14 @@
 node_modules/
+dist/
+.wrangler/
+.dev.vars
 .env
-.env.local
-*.py[co]
-__pycache__/
+.env.*
 .DS_Store
+*.log
+Thumbs.db
+
+# Scripts Python de desenvolvimento (não vão para produção)
+*.py
+__pycache__/
+*.py[co]

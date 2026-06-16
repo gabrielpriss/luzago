@@ -1,7 +1,7 @@
 /* Blog — Luzago Alimentos */
 
 .blog-hero {
-    background-image: linear-gradient(rgba(15, 76, 44, 0.88), rgba(15, 76, 44, 0.92)), url('/assets/imagens/hero-alimentos-variedade.jpeg');
+    background-image: linear-gradient(rgba(15, 76, 44, 0.88), rgba(15, 76, 44, 0.92)), url('/assets/imagens/hero-alimentos-variedade.webp');
     background-size: cover;
     background-position: center;
 }

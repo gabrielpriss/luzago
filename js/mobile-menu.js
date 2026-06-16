@@ -62,7 +62,7 @@
                 '<div class="mobile-menu__overlay" data-mobile-menu-close></div>' +
                 '<aside id="mobile-menu-panel" class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu de navegação" tabindex="-1">' +
                     '<div class="mobile-menu__header">' +
-                        '<a href="/"><img src="/assets/icones/logo-luzago.png" alt="Luzago Alimentos"></a>' +
+                        '<a href="/"><img src="/assets/icones/logo-luzago.webp" alt="Luzago Alimentos"></a>' +
                         '<button type="button" class="mobile-menu__close" data-mobile-menu-close aria-label="Fechar menu">' +
                             '<i class="fa-solid fa-xmark" aria-hidden="true"></i>' +
                         '</button>' +

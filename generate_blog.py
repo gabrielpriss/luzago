@@ -14,7 +14,7 @@ POSTS = [
         'date': '15 de maio de 2025',
         'category': 'Temperos',
         'category_link': '/temperos-e-condimentos/',
-        'image': '/assets/imagens/hero-vegetais.png',
+        'image': '/assets/imagens/hero-vegetais.webp',
         'read_time': '6 min',
         'content': '''
             <p>Na operação de food service, o tempero certo faz diferença no sabor, no tempo de preparo e no custo do prato. A escolha vai além do preço por quilo: envolve padronização, rendimento e frequência de reposição.</p>
@@ -41,7 +41,7 @@ POSTS = [
         'date': '28 de abril de 2025',
         'category': 'Cereais',
         'category_link': '/cereais/',
-        'image': '/assets/imagens/estoque-sacarias.png',
+        'image': '/assets/imagens/estoque-sacarias.webp',
         'read_time': '5 min',
         'content': '''
             <p>O consumidor busca mais fibras, menos processados e rótulos transparentes. No atacado, isso se traduz em maior procura por arroz integral, quinoa, aveia, chia e mix de grãos para revenda e uso industrial.</p>
@@ -68,7 +68,7 @@ POSTS = [
         'date': '10 de abril de 2025',
         'category': 'Conservas',
         'category_link': '/conservas/',
-        'image': '/assets/imagens/interior-armazem.png',
+        'image': '/assets/imagens/interior-armazem.webp',
         'read_time': '4 min',
         'content': '''
             <p>Conservas bem escolhidas funcionam como ingrediente e como destaque no prato. Em cozinhas com alto volume, elas eliminam etapas de limpeza e cocção que consumiriam horas da equipe.</p>
@@ -90,7 +90,7 @@ POSTS = [
         'date': '22 de março de 2025',
         'category': 'Negócios',
         'category_link': '/empresa/',
-        'image': '/assets/imagens/maquina-empacotamento.png',
+        'image': '/assets/imagens/maquina-empacotamento.webp',
         'read_time': '7 min',
         'content': '''
             <p>Comprar bem é importante, mas receber no prazo certo e em perfeitas condições é o que mantém a operação funcionando. Na distribuição de alimentos, a logística é parte do produto.</p>
@@ -116,7 +116,7 @@ POSTS = [
         'date': '5 de março de 2025',
         'category': 'Frutas Secas',
         'category_link': '/frutas-secas-e-castanhas/',
-        'image': '/assets/imagens/moldura-vegetais-frescos.jpeg',
+        'image': '/assets/imagens/moldura-vegetais-frescos.webp',
         'read_time': '5 min',
         'content': '''
             <p>O mercado de snacks saudáveis cresceu nos últimos anos e frutas secas com castanhas estão no centro dessa tendência. Para revenda, a variedade e a apresentação definem a conversão na gôndola.</p>
@@ -212,7 +212,7 @@ def nav(blog_active: bool = False) -> str:
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto max-w-6xl px-4 py-4 flex justify-between items-center">
             <a href="/">
-                <img src="/assets/icones/logo-luzago.png" alt="Luzago Alimentos" class="h-16 md:h-20 object-contain">
+                <img src="/assets/icones/logo-luzago.webp" alt="Luzago Alimentos" class="h-16 md:h-20 object-contain">
             </a>
             <nav class="hidden md:flex items-center gap-5 lg:gap-6 font-bold text-gray-800 text-sm lg:text-base">
                 <a href="/empresa/" class="inline-flex items-center leading-none hover:text-luzago-green transition">Empresa</a>
@@ -343,7 +343,7 @@ def generate_index() -> None:
     html += f'''
     <section class="blog-hero py-16 md:py-24 px-4 text-center text-white">
         <div class="container mx-auto max-w-3xl">
-            <img src="/assets/icones/icone-folha-luzago.png" alt="Luzago Alimentos" class="w-12 h-12 md:w-14 md:h-14 mx-auto mb-4 object-contain">
+            <img src="/assets/icones/icone-folha-luzago.webp" alt="Luzago Alimentos" class="w-12 h-12 md:w-14 md:h-14 mx-auto mb-4 object-contain">
             <h1 class="text-3xl md:text-5xl font-bold mb-4">Blog Luzago</h1>
             <p class="text-white/85 text-base md:text-lg leading-relaxed">Conteúdos sobre alimentos, atacado e food service para ajudar seu negócio a comprar melhor e vender mais.</p>
         </div>

@@ -39,7 +39,7 @@ window.LUZAGO_CATALOG = {
   "products": [
     {
       "name": "Alecrim",
-      "image": "/assets/temperos/alecrim.jpeg",
+      "image": "/assets/temperos/alecrim.webp",
       "sizes": "100g | 1Kg | 10X10",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -47,7 +47,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Açafrão / Cúrcuma",
-      "image": "/assets/temperos/acafrao-curcuma.jpeg",
+      "image": "/assets/temperos/acafrao-curcuma.webp",
       "sizes": "100g | 1Kg | 10 X 30g | 10Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -55,7 +55,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Alho em Pó",
-      "image": "/assets/temperos/alho-em-po.jpeg",
+      "image": "/assets/temperos/alho-em-po.webp",
       "sizes": "100g | 1Kg | 10X10",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -63,7 +63,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Alho Frito",
-      "image": "/assets/temperos/alho-frito.jpeg",
+      "image": "/assets/temperos/alho-frito.webp",
       "sizes": "100g | 1Kg | 10X10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -71,7 +71,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Amaciante De Carne",
-      "image": "/assets/temperos/amaciante-de-carne.jpeg",
+      "image": "/assets/temperos/amaciante-de-carne.webp",
       "sizes": "100g | 1 Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -79,7 +79,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Anis Estrelado",
-      "image": "/assets/temperos/anis-estrelado.jpeg",
+      "image": "/assets/temperos/anis-estrelado.webp",
       "sizes": "100g | 1 Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -87,7 +87,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Bicarbonato De Sodio",
-      "image": "/assets/temperos/bicarbonato-de-sodio.jpeg",
+      "image": "/assets/temperos/bicarbonato-de-sodio.webp",
       "sizes": "100g | 500g | 1005Kg | 10 X 50g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -95,7 +95,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Caldo Carne",
-      "image": "/assets/temperos/caldo-carne.jpeg",
+      "image": "/assets/temperos/caldo-carne.webp",
       "sizes": "100g | 1005Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -103,7 +103,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Caldo Costela",
-      "image": "/assets/temperos/caldo-costela.jpeg",
+      "image": "/assets/temperos/caldo-costela.webp",
       "sizes": "100g | 1005Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -111,7 +111,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Caldo De Bacon",
-      "image": "/assets/temperos/caldo-de-bacon.jpeg",
+      "image": "/assets/temperos/caldo-de-bacon.webp",
       "sizes": "100g | 1005Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -119,7 +119,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Caldo de Camarão",
-      "image": "/assets/temperos/caldo-de-camarao.jpeg",
+      "image": "/assets/temperos/caldo-de-camarao.webp",
       "sizes": "100g | 1005Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -127,7 +127,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Caldo De Legumes",
-      "image": "/assets/temperos/caldo-de-legumes.jpeg",
+      "image": "/assets/temperos/caldo-de-legumes.webp",
       "sizes": "100g | 1005Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -135,7 +135,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Caldo De Peixe",
-      "image": "/assets/temperos/caldo-de-peixe.jpeg",
+      "image": "/assets/temperos/caldo-de-peixe.webp",
       "sizes": "100g | 1005Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -143,7 +143,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Caldo Galinha",
-      "image": "/assets/temperos/caldo-galinha.jpeg",
+      "image": "/assets/temperos/caldo-galinha.webp",
       "sizes": "100g | 1005Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -151,7 +151,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Camomila Em Flor Extra",
-      "image": "/assets/temperos/camomila-em-flor-extra.jpeg",
+      "image": "/assets/temperos/camomila-em-flor-extra.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -159,7 +159,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Canela Pó",
-      "image": "/assets/temperos/canela-po.jpeg",
+      "image": "/assets/temperos/canela-po.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -167,7 +167,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Canela Rama 6cm",
-      "image": "/assets/temperos/canela-rama-6cm.jpeg",
+      "image": "/assets/temperos/canela-rama-6cm.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -175,7 +175,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Capim Limão",
-      "image": "/assets/temperos/capim-limao.jpeg",
+      "image": "/assets/temperos/capim-limao.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -183,7 +183,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cardamomo Grão",
-      "image": "/assets/temperos/cardamomo-grao.jpeg",
+      "image": "/assets/temperos/cardamomo-grao.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -191,7 +191,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cebola Em Flocos",
-      "image": "/assets/temperos/cebola-em-flocos.jpeg",
+      "image": "/assets/temperos/cebola-em-flocos.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -199,7 +199,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cebola Em Pó",
-      "image": "/assets/temperos/cebola-em-po.jpeg",
+      "image": "/assets/temperos/cebola-em-po.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -207,7 +207,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cebolinha Desidratada",
-      "image": "/assets/temperos/cebolinha-desidratada.jpeg",
+      "image": "/assets/temperos/cebolinha-desidratada.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -215,7 +215,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cheiro Verde",
-      "image": "/assets/temperos/cheiro-verde.jpeg",
+      "image": "/assets/temperos/cheiro-verde.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -223,7 +223,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Chilli Mexicano",
-      "image": "/assets/temperos/chilli-mexicano.jpeg",
+      "image": "/assets/temperos/chilli-mexicano.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -231,7 +231,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Chimichurri",
-      "image": "/assets/temperos/chimichurri.jpeg",
+      "image": "/assets/temperos/chimichurri.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -239,7 +239,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Chimichurri Sem Pimenta",
-      "image": "/assets/temperos/chimichurri-sem-pimenta.jpeg",
+      "image": "/assets/temperos/chimichurri-sem-pimenta.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -247,7 +247,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Coentro Em Grão",
-      "image": "/assets/temperos/coentro-em-grao.jpeg",
+      "image": "/assets/temperos/coentro-em-grao.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -255,7 +255,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cominho Em Pó",
-      "image": "/assets/temperos/cominho-em-po.jpeg",
+      "image": "/assets/temperos/cominho-em-po.webp",
       "sizes": "100g | 10 X 30g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -263,7 +263,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Coentro Em Pó",
-      "image": "/assets/temperos/coentro-em-po.jpeg",
+      "image": "/assets/temperos/coentro-em-po.webp",
       "sizes": "100g | 1005Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -271,7 +271,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Coentro Folha",
-      "image": "/assets/temperos/coentro-folha.jpeg",
+      "image": "/assets/temperos/coentro-folha.webp",
       "sizes": "100g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -279,7 +279,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cravo Em Flor",
-      "image": "/assets/temperos/cravo-em-flor.jpeg",
+      "image": "/assets/temperos/cravo-em-flor.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -287,7 +287,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cravo Em Po",
-      "image": "/assets/temperos/cravo-em-po.jpeg",
+      "image": "/assets/temperos/cravo-em-po.webp",
       "sizes": "100g | 10 X 30g | 1 Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -295,7 +295,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Creme De Cebola",
-      "image": "/assets/temperos/creme-de-cebola.jpeg",
+      "image": "/assets/temperos/creme-de-cebola.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -303,7 +303,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Curry",
-      "image": "/assets/temperos/curry.jpeg",
+      "image": "/assets/temperos/curry.webp",
       "sizes": "100g | 1Kg | 10 X 30g | 500g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -311,7 +311,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Erva Doce",
-      "image": "/assets/temperos/erva-doce.jpeg",
+      "image": "/assets/temperos/erva-doce.webp",
       "sizes": "500g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -319,7 +319,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Ervas Finas",
-      "image": "/assets/temperos/ervas-finas.jpeg",
+      "image": "/assets/temperos/ervas-finas.webp",
       "sizes": "100g | 1005Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -327,7 +327,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Espinafre Em Pó",
-      "image": "/assets/temperos/espinafre-em-po.jpeg",
+      "image": "/assets/temperos/espinafre-em-po.webp",
       "sizes": "1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -335,7 +335,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Fumaça Em Pó",
-      "image": "/assets/temperos/fumaca-em-po.jpeg",
+      "image": "/assets/temperos/fumaca-em-po.webp",
       "sizes": "100g | 10 X 30g | 1005 Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -343,7 +343,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Funghi Secchi",
-      "image": "/assets/temperos/funghi-secchi.jpeg",
+      "image": "/assets/temperos/funghi-secchi.webp",
       "sizes": "100g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -351,7 +351,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gengibre Moido",
-      "image": "/assets/temperos/gengibre-moido.jpeg",
+      "image": "/assets/temperos/gengibre-moido.webp",
       "sizes": "100g | 10 X 30g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -359,7 +359,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Glutamato Monossódico",
-      "image": "/assets/temperos/glutamato-monossodico.jpeg",
+      "image": "/assets/temperos/glutamato-monossodico.webp",
       "sizes": "10 X 30g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -367,7 +367,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Hibisco",
-      "image": "/assets/temperos/hibisco.jpeg",
+      "image": "/assets/temperos/hibisco.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -375,7 +375,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Hortelã Desidratada",
-      "image": "/assets/temperos/hortela-desidratada.jpeg",
+      "image": "/assets/temperos/hortela-desidratada.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -383,7 +383,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Lemon Herbs",
-      "image": "/assets/temperos/lemon-herbs.jpeg",
+      "image": "/assets/temperos/lemon-herbs.webp",
       "sizes": "100g | 1005Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -391,7 +391,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Lemon Pepper",
-      "image": "/assets/temperos/lemon-pepper.jpeg",
+      "image": "/assets/temperos/lemon-pepper.webp",
       "sizes": "100g | 1005Kg | 500g | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -399,7 +399,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Louro Em Pó",
-      "image": "/assets/temperos/louro-em-po.jpeg",
+      "image": "/assets/temperos/louro-em-po.webp",
       "sizes": "100g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -407,7 +407,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Louro Em Folhas",
-      "image": "/assets/temperos/louro-em-folhas.jpeg",
+      "image": "/assets/temperos/louro-em-folhas.webp",
       "sizes": "100g | 1Kg | 10 X 5g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -415,7 +415,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Manjericão",
-      "image": "/assets/temperos/manjericao.jpeg",
+      "image": "/assets/temperos/manjericao.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -423,7 +423,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Manjerona",
-      "image": "/assets/temperos/manjerona.jpeg",
+      "image": "/assets/temperos/manjerona.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -431,7 +431,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Mostarda Em Grão",
-      "image": "/assets/temperos/mostarda-em-grao.jpeg",
+      "image": "/assets/temperos/mostarda-em-grao.webp",
       "sizes": "100g | 1005Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -439,7 +439,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Mostarda Em Pó",
-      "image": "/assets/temperos/mostarda-em-po.jpeg",
+      "image": "/assets/temperos/mostarda-em-po.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -447,7 +447,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Noz Moscada Bola",
-      "image": "/assets/temperos/noz-moscada-bola.jpeg",
+      "image": "/assets/temperos/noz-moscada-bola.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -455,7 +455,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Noz Moscada Pó",
-      "image": "/assets/temperos/noz-moscada-po.jpeg",
+      "image": "/assets/temperos/noz-moscada-po.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -463,7 +463,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Orégano",
-      "image": "/assets/temperos/oregano.jpeg",
+      "image": "/assets/temperos/oregano.webp",
       "sizes": "100g | 500g | 1Kg | 10X10 g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -471,7 +471,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Paprica Defumada",
-      "image": "/assets/temperos/paprica-defumada.jpeg",
+      "image": "/assets/temperos/paprica-defumada.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -479,7 +479,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Paprica Doce",
-      "image": "/assets/temperos/paprica-doce.jpeg",
+      "image": "/assets/temperos/paprica-doce.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -487,7 +487,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Paprica Picante",
-      "image": "/assets/temperos/paprica-picante.jpeg",
+      "image": "/assets/temperos/paprica-picante.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -495,7 +495,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Branca Em Grão",
-      "image": "/assets/temperos/pimenta-branca-em-grao.jpeg",
+      "image": "/assets/temperos/pimenta-branca-em-grao.webp",
       "sizes": "100g | 1Kg | 10Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -503,7 +503,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Branca Em Pó",
-      "image": "/assets/temperos/pimenta-branca-em-po.jpeg",
+      "image": "/assets/temperos/pimenta-branca-em-po.webp",
       "sizes": "100g | 1Kg | 10Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -511,7 +511,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Caiena",
-      "image": "/assets/temperos/pimenta-caiena.jpeg",
+      "image": "/assets/temperos/pimenta-caiena.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -519,7 +519,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Calabresa",
-      "image": "/assets/temperos/pimenta-calabresa.jpeg",
+      "image": "/assets/temperos/pimenta-calabresa.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -527,7 +527,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Calabresa Moida",
-      "image": "/assets/temperos/pimenta-calabresa-moida.jpeg",
+      "image": "/assets/temperos/pimenta-calabresa-moida.webp",
       "sizes": "1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -535,7 +535,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Do Reino Em Grão",
-      "image": "/assets/temperos/pimenta-do-reino-em-grao.jpeg",
+      "image": "/assets/temperos/pimenta-do-reino-em-grao.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -543,7 +543,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Do Reino Em Pó",
-      "image": "/assets/temperos/pimenta-do-reino-em-po.jpeg",
+      "image": "/assets/temperos/pimenta-do-reino-em-po.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -551,7 +551,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Jamaica",
-      "image": "/assets/temperos/pimenta-jamaica.jpeg",
+      "image": "/assets/temperos/pimenta-jamaica.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -559,7 +559,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Jamaica Em Grão",
-      "image": "/assets/temperos/pimenta-jamaica-em-grao.jpeg",
+      "image": "/assets/temperos/pimenta-jamaica-em-grao.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -567,7 +567,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Rosa",
-      "image": "/assets/temperos/pimenta-rosa.jpeg",
+      "image": "/assets/temperos/pimenta-rosa.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -575,7 +575,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pimenta Siria (Ba Har)",
-      "image": "/assets/temperos/pimenta-siria-ba-har.png",
+      "image": "/assets/temperos/pimenta-siria-ba-har.webp",
       "sizes": "100g | 1Kg | 10Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -583,7 +583,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Sal Grosso",
-      "image": "/assets/temperos/sal-grosso.jpeg",
+      "image": "/assets/temperos/sal-grosso.webp",
       "sizes": "1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -591,7 +591,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Sal Mágico",
-      "image": "/assets/temperos/sal-magico.jpeg",
+      "image": "/assets/temperos/sal-magico.webp",
       "sizes": "100g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -599,7 +599,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Sal Refinado",
-      "image": "/assets/temperos/sal-refinado.jpeg",
+      "image": "/assets/temperos/sal-refinado.webp",
       "sizes": "1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -607,7 +607,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Sal Rosa Do Himalaia Fino",
-      "image": "/assets/temperos/sal-rosa-do-himalaia-fino.jpeg",
+      "image": "/assets/temperos/sal-rosa-do-himalaia-fino.webp",
       "sizes": "100g | 1Kg | 10Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -615,7 +615,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Sal Rosa Do Himalaia Grosso",
-      "image": "/assets/temperos/sal-rosa-do-himalaia-grosso.jpeg",
+      "image": "/assets/temperos/sal-rosa-do-himalaia-grosso.webp",
       "sizes": "100g | 1Kg | 10Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -623,7 +623,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Salsinha Desidratada",
-      "image": "/assets/temperos/salsinha-desidratada.jpeg",
+      "image": "/assets/temperos/salsinha-desidratada.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -631,7 +631,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Sálvia",
-      "image": "/assets/temperos/salvia.jpeg",
+      "image": "/assets/temperos/salvia.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -639,7 +639,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Baiano",
-      "image": "/assets/temperos/tempero-baiano.jpeg",
+      "image": "/assets/temperos/tempero-baiano.webp",
       "sizes": "100g | 10 X 30g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -647,7 +647,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Luzago Carne",
-      "image": "/assets/temperos/tempero-luzago-carne.jpeg",
+      "image": "/assets/temperos/tempero-luzago-carne.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -655,7 +655,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Luzago Feijão",
-      "image": "/assets/temperos/tempero-luzago-feijao.jpeg",
+      "image": "/assets/temperos/tempero-luzago-feijao.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -663,7 +663,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Luzago Frango",
-      "image": "/assets/temperos/tempero-luzago-frango.png",
+      "image": "/assets/temperos/tempero-luzago-frango.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -671,7 +671,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Luzago Maridão",
-      "image": "/assets/temperos/tempero-luzago-maridao.jpeg",
+      "image": "/assets/temperos/tempero-luzago-maridao.webp",
       "sizes": "100g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -679,7 +679,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Luzago Nordeste",
-      "image": "/assets/temperos/tempero-luzago-nordeste.jpeg",
+      "image": "/assets/temperos/tempero-luzago-nordeste.webp",
       "sizes": "100g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -687,7 +687,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Recheio Divino",
-      "image": "/assets/temperos/tempero-recheio-divino.jpeg",
+      "image": "/assets/temperos/tempero-recheio-divino.webp",
       "sizes": "100g | 1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -695,7 +695,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tempero Toque da Esposa",
-      "image": "/assets/temperos/tempero-toque-da-esposa.jpeg",
+      "image": "/assets/temperos/tempero-toque-da-esposa.webp",
       "sizes": "1Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -703,7 +703,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tomilho Em Grão",
-      "image": "/assets/temperos/tomilho-em-grao.jpeg",
+      "image": "/assets/temperos/tomilho-em-grao.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -711,7 +711,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Vinagrete Desidratado",
-      "image": "/assets/temperos/vinagrete-desidratado.jpeg",
+      "image": "/assets/temperos/vinagrete-desidratado.webp",
       "sizes": "100g | 1Kg | 10 X 10g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -719,7 +719,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Zattar",
-      "image": "/assets/temperos/zattar.jpeg",
+      "image": "/assets/temperos/zattar.webp",
       "sizes": "100g | 1Kg | 10 X 30g",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -727,7 +727,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Zimbro Grão",
-      "image": "/assets/temperos/zimbro-grao.jpeg",
+      "image": "/assets/temperos/zimbro-grao.webp",
       "sizes": "100g | 1Kg | 10Kg",
       "category": "temperos",
       "categoryName": "Temperos e Condimentos",
@@ -735,7 +735,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Amendoim Cru",
-      "image": "/assets/cereais/amendoim-cru.jpeg",
+      "image": "/assets/cereais/amendoim-cru.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -743,7 +743,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Amendoim Torrado e Moído",
-      "image": "/assets/cereais/amendoim-torrado-e-moido.jpeg",
+      "image": "/assets/cereais/amendoim-torrado-e-moido.webp",
       "sizes": "1Kg | 10Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -751,7 +751,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Arbóreo",
-      "image": "/assets/cereais/arroz-arboreo.jpeg",
+      "image": "/assets/cereais/arroz-arboreo.webp",
       "sizes": "5Kg | 30Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -759,7 +759,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Buriti Branco",
-      "image": "/assets/cereais/arroz-buriti-branco.png",
+      "image": "/assets/cereais/arroz-buriti-branco.webp",
       "sizes": "5Kg | 30Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -767,7 +767,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Integral Agulinha",
-      "image": "/assets/cereais/arroz-integral-agulinha.jpeg",
+      "image": "/assets/cereais/arroz-integral-agulinha.webp",
       "sizes": "1Kg | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -775,7 +775,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Integral Cateto Branco",
-      "image": "/assets/cereais/arroz-integral-cateto-branco.jpeg",
+      "image": "/assets/cereais/arroz-integral-cateto-branco.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -783,7 +783,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Integral Cateto Misto",
-      "image": "/assets/cereais/arroz-integral-cateto-misto.jpeg",
+      "image": "/assets/cereais/arroz-integral-cateto-misto.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -791,7 +791,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Integral Cateto Vermelho",
-      "image": "/assets/cereais/arroz-integral-cateto-vermelho.jpeg",
+      "image": "/assets/cereais/arroz-integral-cateto-vermelho.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -799,7 +799,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Integral Negro",
-      "image": "/assets/cereais/arroz-integral-negro.jpeg",
+      "image": "/assets/cereais/arroz-integral-negro.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -807,7 +807,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Arroz Oito Grãos",
-      "image": "/assets/cereais/arroz-oito-graos.png",
+      "image": "/assets/cereais/arroz-oito-graos.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -815,7 +815,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Chia Hispânica Extra",
-      "image": "/assets/cereais/chia-hispanica-extra.jpeg",
+      "image": "/assets/cereais/chia-hispanica-extra.webp",
       "sizes": "1Kg | 100Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -823,7 +823,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Ervilha Partida",
-      "image": "/assets/cereais/ervilha-partida.jpeg",
+      "image": "/assets/cereais/ervilha-partida.webp",
       "sizes": "500g | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -831,7 +831,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Feijão Branco Argentino",
-      "image": "/assets/cereais/feijao-branco-argentino.jpeg",
+      "image": "/assets/cereais/feijao-branco-argentino.webp",
       "sizes": "500g | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -839,7 +839,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Feijão Carioca Tipo 01 Fardo",
-      "image": "/assets/cereais/feijao-carioca-tipo-01-fardo.jpeg",
+      "image": "/assets/cereais/feijao-carioca-tipo-01-fardo.webp",
       "sizes": "1Kg | 30Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -847,7 +847,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Feijão Cavalo",
-      "image": "/assets/cereais/feijao-cavalo.jpeg",
+      "image": "/assets/cereais/feijao-cavalo.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -855,7 +855,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Feijão Fradinho",
-      "image": "/assets/cereais/feijao-fradinho.jpeg",
+      "image": "/assets/cereais/feijao-fradinho.webp",
       "sizes": "500g | 1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -863,7 +863,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Feijão Preto Tipo 01 Fardo",
-      "image": "/assets/cereais/feijao-preto-tipo-01-fardo.jpeg",
+      "image": "/assets/cereais/feijao-preto-tipo-01-fardo.webp",
       "sizes": "1Kg | 30Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -871,7 +871,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gergelim Branco sem Casca",
-      "image": "/assets/cereais/gergelim-branco-sem-casca.jpeg",
+      "image": "/assets/cereais/gergelim-branco-sem-casca.webp",
       "sizes": "Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -879,7 +879,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gergelim Preto",
-      "image": "/assets/cereais/gergelim-preto.jpeg",
+      "image": "/assets/cereais/gergelim-preto.webp",
       "sizes": "Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -887,7 +887,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gergelim Torrado",
-      "image": "/assets/cereais/gergelim-torrado.jpeg",
+      "image": "/assets/cereais/gergelim-torrado.webp",
       "sizes": "Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -895,7 +895,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Girassol Pepita sem Casca",
-      "image": "/assets/cereais/girassol-pepita-sem-casca.jpeg",
+      "image": "/assets/cereais/girassol-pepita-sem-casca.webp",
       "sizes": "100g | 1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -903,7 +903,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Goma de Tapioca Hidratada (Massa Pronta)",
-      "image": "/assets/cereais/goma-de-tapioca-hidratada-massa-pronta.jpeg",
+      "image": "/assets/cereais/goma-de-tapioca-hidratada-massa-pronta.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -911,7 +911,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Grão de Bico 12mm",
-      "image": "/assets/cereais/grao-de-bico-12mm.jpeg",
+      "image": "/assets/cereais/grao-de-bico-12mm.webp",
       "sizes": "1Kg | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -919,7 +919,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Grão de Bico 9mm",
-      "image": "/assets/cereais/grao-de-bico-9mm.jpeg",
+      "image": "/assets/cereais/grao-de-bico-9mm.webp",
       "sizes": "500g | 1Kg | 25Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -927,7 +927,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Lentilha Canadense",
-      "image": "/assets/cereais/lentilha-canadense.jpeg",
+      "image": "/assets/cereais/lentilha-canadense.webp",
       "sizes": "500g | 1Kg | 25Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -935,7 +935,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Linhaça Dourada",
-      "image": "/assets/cereais/linhaca-dourada.jpeg",
+      "image": "/assets/cereais/linhaca-dourada.webp",
       "sizes": "100g | 1Kg | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -943,7 +943,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Linhaça Marrom",
-      "image": "/assets/cereais/linhaca-marrom.jpeg",
+      "image": "/assets/cereais/linhaca-marrom.webp",
       "sizes": "Saca | 1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -951,7 +951,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pipoca Americana",
-      "image": "/assets/cereais/pipoca-americana.jpeg",
+      "image": "/assets/cereais/pipoca-americana.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -959,7 +959,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Proteína de Soja Caramelo (PTS)",
-      "image": "/assets/cereais/proteina-de-soja-caramelo-pts.jpeg",
+      "image": "/assets/cereais/proteina-de-soja-caramelo-pts.webp",
       "sizes": "1Kg | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -967,7 +967,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Proteína de Soja Natural (PTS)",
-      "image": "/assets/cereais/proteina-de-soja-natural-pts.jpeg",
+      "image": "/assets/cereais/proteina-de-soja-natural-pts.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -975,7 +975,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Quinoa em Grão",
-      "image": "/assets/cereais/quinoa-em-grao.jpeg",
+      "image": "/assets/cereais/quinoa-em-grao.webp",
       "sizes": "100g | 1Kg | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -983,7 +983,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Quinoa Mista",
-      "image": "/assets/cereais/quinoa-mista.jpeg",
+      "image": "/assets/cereais/quinoa-mista.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -991,7 +991,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Quinoa Preta em Grão",
-      "image": "/assets/cereais/quinoa-preta-em-grao.jpeg",
+      "image": "/assets/cereais/quinoa-preta-em-grao.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -999,7 +999,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Quinoa Vermelha em Grão",
-      "image": "/assets/cereais/quinoa-vermelha-em-grao.jpeg",
+      "image": "/assets/cereais/quinoa-vermelha-em-grao.webp",
       "sizes": "1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -1007,7 +1007,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Semente de Abóbora",
-      "image": "/assets/cereais/semente-de-abobora.jpeg",
+      "image": "/assets/cereais/semente-de-abobora.webp",
       "sizes": "100g | 1Kg",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -1015,7 +1015,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Soja em Grão",
-      "image": "/assets/cereais/soja-em-grao.jpeg",
+      "image": "/assets/cereais/soja-em-grao.webp",
       "sizes": "500g | 1Kg | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -1023,7 +1023,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Trigo em Grão",
-      "image": "/assets/cereais/trigo-em-grao.jpeg",
+      "image": "/assets/cereais/trigo-em-grao.webp",
       "sizes": "1Kg | Saca",
       "category": "cereais",
       "categoryName": "Cereais",
@@ -1031,7 +1031,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Amido de Milho",
-      "image": "/assets/farinaceos/amido-de-milho.jpeg",
+      "image": "/assets/farinaceos/amido-de-milho.webp",
       "sizes": "1Kg | Saca",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1039,7 +1039,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Aveia em Flocos Fina",
-      "image": "/assets/farinaceos/aveia-em-flocos-fina.jpeg",
+      "image": "/assets/farinaceos/aveia-em-flocos-fina.webp",
       "sizes": "1Kg | Saca",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1047,7 +1047,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Aveia em Flocos Grossa",
-      "image": "/assets/farinaceos/aveia-em-flocos-grossa.jpeg",
+      "image": "/assets/farinaceos/aveia-em-flocos-grossa.webp",
       "sizes": "1Kg | Saca",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1055,7 +1055,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Aveia em Flocos Média",
-      "image": "/assets/farinaceos/aveia-em-flocos-media.jpeg",
+      "image": "/assets/farinaceos/aveia-em-flocos-media.webp",
       "sizes": "1Kg | Saca",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1063,7 +1063,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Colágeno Hidrolisado",
-      "image": "/assets/farinaceos/colageno-hidrolisado.jpeg",
+      "image": "/assets/farinaceos/colageno-hidrolisado.webp",
       "sizes": "100g | 1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1071,7 +1071,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farelo de Aveia",
-      "image": "/assets/farinaceos/farelo-de-aveia.jpeg",
+      "image": "/assets/farinaceos/farelo-de-aveia.webp",
       "sizes": "1Kg | 25Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1079,7 +1079,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Amendoim",
-      "image": "/assets/farinaceos/farinha-de-amendoim.jpeg",
+      "image": "/assets/farinaceos/farinha-de-amendoim.webp",
       "sizes": "1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1087,7 +1087,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Arroz",
-      "image": "/assets/farinaceos/farinha-de-arroz.jpeg",
+      "image": "/assets/farinaceos/farinha-de-arroz.webp",
       "sizes": "1Kg | Saca",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1095,7 +1095,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Arroz Integral",
-      "image": "/assets/farinaceos/farinha-de-arroz-integral.jpeg",
+      "image": "/assets/farinaceos/farinha-de-arroz-integral.webp",
       "sizes": "1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1103,7 +1103,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Aveia",
-      "image": "/assets/farinaceos/farinha-de-aveia.jpeg",
+      "image": "/assets/farinaceos/farinha-de-aveia.webp",
       "sizes": "1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1111,7 +1111,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Castanha de Caju",
-      "image": "/assets/farinaceos/farinha-de-castanha-de-caju.jpeg",
+      "image": "/assets/farinaceos/farinha-de-castanha-de-caju.webp",
       "sizes": "1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1119,7 +1119,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Linhaça Dourada",
-      "image": "/assets/farinaceos/farinha-de-linhaca-dourada.jpeg",
+      "image": "/assets/farinaceos/farinha-de-linhaca-dourada.webp",
       "sizes": "1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1127,7 +1127,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Linhaça Marrom",
-      "image": "/assets/farinaceos/farinha-de-linhaca-marrom.jpeg",
+      "image": "/assets/farinaceos/farinha-de-linhaca-marrom.webp",
       "sizes": "1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1135,7 +1135,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Mandioca Branca",
-      "image": "/assets/farinaceos/farinha-de-mandioca-branca.png",
+      "image": "/assets/farinaceos/farinha-de-mandioca-branca.webp",
       "sizes": "1Kg | 20Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1143,7 +1143,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Mandioca Extra Fina",
-      "image": "/assets/farinaceos/farinha-de-mandioca-extra-fina.jpeg",
+      "image": "/assets/farinaceos/farinha-de-mandioca-extra-fina.webp",
       "sizes": "1Kg | 20Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1151,7 +1151,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Mandioca Torrada",
-      "image": "/assets/farinaceos/farinha-de-mandioca-torrada.jpeg",
+      "image": "/assets/farinaceos/farinha-de-mandioca-torrada.webp",
       "sizes": "1Kg | 20Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1159,7 +1159,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Milho Amarela",
-      "image": "/assets/farinaceos/farinha-de-milho-amarela.jpeg",
+      "image": "/assets/farinaceos/farinha-de-milho-amarela.webp",
       "sizes": "1Kg | 20Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1167,7 +1167,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Milho Branca",
-      "image": "/assets/farinaceos/farinha-de-milho-branca.jpeg",
+      "image": "/assets/farinaceos/farinha-de-milho-branca.webp",
       "sizes": "1Kg | 20Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1175,7 +1175,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Pão Luzago",
-      "image": "/assets/farinaceos/farinha-de-pao-luzago.jpeg",
+      "image": "/assets/farinaceos/farinha-de-pao-luzago.webp",
       "sizes": "1Kg | 5Kg | Saca",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1183,7 +1183,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Pão Especial",
-      "image": "/assets/farinaceos/farinha-de-pao-especial.jpeg",
+      "image": "/assets/farinaceos/farinha-de-pao-especial.webp",
       "sizes": "1Kg | 5Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1191,7 +1191,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Trigo 0000",
-      "image": "/assets/farinaceos/farinha-de-trigo-0000.jpeg",
+      "image": "/assets/farinaceos/farinha-de-trigo-0000.webp",
       "sizes": "5Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1199,7 +1199,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Trigo Especial",
-      "image": "/assets/farinaceos/farinha-de-trigo-especial.jpeg",
+      "image": "/assets/farinaceos/farinha-de-trigo-especial.webp",
       "sizes": "5Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1207,7 +1207,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha de Trigo Semolina",
-      "image": "/assets/farinaceos/farinha-de-trigo-semolina.jpeg",
+      "image": "/assets/farinaceos/farinha-de-trigo-semolina.webp",
       "sizes": "1Kg | 5Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1215,7 +1215,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Farinha Panko",
-      "image": "/assets/farinaceos/farinha-panko.png",
+      "image": "/assets/farinaceos/farinha-panko.webp",
       "sizes": "250g | 1Kg | 10Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1223,7 +1223,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Fécula de Batata",
-      "image": "/assets/farinaceos/fecula-de-batata.jpeg",
+      "image": "/assets/farinaceos/fecula-de-batata.webp",
       "sizes": "1Kg | Saca",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1231,7 +1231,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Fubá Amarelo",
-      "image": "/assets/farinaceos/fuba-amarelo.jpeg",
+      "image": "/assets/farinaceos/fuba-amarelo.webp",
       "sizes": "1Kg",
       "category": "farinaceos",
       "categoryName": "Farináceos",
@@ -1239,7 +1239,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Ameixa com Caroço",
-      "image": "/assets/frutas-secas-e-castanhas/ameixa-com-caroco.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/ameixa-com-caroco.webp",
       "sizes": "100g | 1Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1247,7 +1247,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Ameixa sem Caroço",
-      "image": "/assets/frutas-secas-e-castanhas/ameixa-sem-caroco.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/ameixa-sem-caroco.webp",
       "sizes": "100g | 1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1255,7 +1255,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Amêndoa Crua Graúda",
-      "image": "/assets/frutas-secas-e-castanhas/amendoa-crua-grauda.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/amendoa-crua-grauda.webp",
       "sizes": "100g | 1Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1263,7 +1263,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Amêndoa Laminada",
-      "image": "/assets/frutas-secas-e-castanhas/amendoa-laminada.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/amendoa-laminada.webp",
       "sizes": "1Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1271,7 +1271,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Castanha de Caju Crua",
-      "image": "/assets/frutas-secas-e-castanhas/castanha-de-caju-crua.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/castanha-de-caju-crua.webp",
       "sizes": "100g | 1Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1279,7 +1279,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Castanha de Caju Torrada",
-      "image": "/assets/frutas-secas-e-castanhas/castanha-de-caju-torrada.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/castanha-de-caju-torrada.webp",
       "sizes": "100g | 1Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1287,7 +1287,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Castanha de Caju Xerém",
-      "image": "/assets/frutas-secas-e-castanhas/castanha-de-caju-xerem.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/castanha-de-caju-xerem.webp",
       "sizes": "100g | 1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1295,7 +1295,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Castanha do Pará Inteira",
-      "image": "/assets/frutas-secas-e-castanhas/castanha-do-para-inteira.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/castanha-do-para-inteira.webp",
       "sizes": "100g | 1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1303,7 +1303,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Castanha do Pará Partida",
-      "image": "/assets/frutas-secas-e-castanhas/castanha-do-para-partida.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/castanha-do-para-partida.webp",
       "sizes": "1Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1311,7 +1311,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Coco Fino Com Açúcar",
-      "image": "/assets/frutas-secas-e-castanhas/coco-fino-com-acucar.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/coco-fino-com-acucar.webp",
       "sizes": "1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1319,7 +1319,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Coco Ralado Fino",
-      "image": "/assets/frutas-secas-e-castanhas/coco-ralado-fino.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/coco-ralado-fino.webp",
       "sizes": "1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1327,7 +1327,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "COCO RALADO GROSSO",
-      "image": "/assets/frutas-secas-e-castanhas/coco-ralado-grosso.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/coco-ralado-grosso.webp",
       "sizes": "1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1335,7 +1335,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Coco Ralado Médio",
-      "image": "/assets/frutas-secas-e-castanhas/coco-ralado-medio.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/coco-ralado-medio.webp",
       "sizes": "1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1343,7 +1343,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Damasco Turco Picado",
-      "image": "/assets/frutas-secas-e-castanhas/damasco-turco-picado.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/damasco-turco-picado.webp",
       "sizes": "1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1351,7 +1351,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Damasco Turco",
-      "image": "/assets/frutas-secas-e-castanhas/damasco-turco.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/damasco-turco.webp",
       "sizes": "1Kg | 100Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1359,7 +1359,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Nozes Chilenas Quartz Light",
-      "image": "/assets/frutas-secas-e-castanhas/nozes-chilenas-quartz-light.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/nozes-chilenas-quartz-light.webp",
       "sizes": "1Kg | 100g",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1367,7 +1367,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Pistache Cru",
-      "image": "/assets/frutas-secas-e-castanhas/pistache-cru.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/pistache-cru.webp",
       "sizes": "1Kg | 100g",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1375,7 +1375,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Frutas Cristalizadas",
-      "image": "/assets/frutas-secas-e-castanhas/frutas-cristalizadas.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/frutas-cristalizadas.webp",
       "sizes": "1Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1383,7 +1383,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Uva Passas Preta",
-      "image": "/assets/frutas-secas-e-castanhas/uva-passas-preta.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/uva-passas-preta.webp",
       "sizes": "1Kg | 100g | 500g | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1391,7 +1391,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tamara sem Caroço",
-      "image": "/assets/frutas-secas-e-castanhas/tamara-sem-caroco.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/tamara-sem-caroco.webp",
       "sizes": "1Kg | 100g",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1399,7 +1399,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Uva Passas Branca",
-      "image": "/assets/frutas-secas-e-castanhas/uva-passas-branca.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/uva-passas-branca.webp",
       "sizes": "1Kg | 100g",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1407,7 +1407,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Figo Seco",
-      "image": "/assets/frutas-secas-e-castanhas/figo-seco.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/figo-seco.webp",
       "sizes": "1Kg | 100g | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1415,7 +1415,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cranberry Fruto",
-      "image": "/assets/frutas-secas-e-castanhas/cranberry-fruto.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/cranberry-fruto.webp",
       "sizes": "1Kg | 100Kg",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1423,7 +1423,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Nozes Chilenas Quartilhos",
-      "image": "/assets/frutas-secas-e-castanhas/nozes-chilenas-quartilhos.jpeg",
+      "image": "/assets/frutas-secas-e-castanhas/nozes-chilenas-quartilhos.webp",
       "sizes": "1Kg | Caixa",
       "category": "frutas-secas",
       "categoryName": "Frutas Secas e Castanhas",
@@ -1431,7 +1431,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Champignom Fatiado",
-      "image": "/assets/conservas/champignon-fatiado.jpeg",
+      "image": "/assets/conservas/champignon-fatiado.webp",
       "sizes": "1Kg",
       "category": "conservas",
       "categoryName": "Conservas",
@@ -1439,7 +1439,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Ovo de Codorna",
-      "image": "/assets/conservas/ovo-de-codorna.jpeg",
+      "image": "/assets/conservas/ovo-de-codorna.webp",
       "sizes": "2Kg",
       "category": "conservas",
       "categoryName": "Conservas",
@@ -1447,7 +1447,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Azeite Extra Virgem",
-      "image": "/assets/food-service/azeite-extra-virgem.jpeg",
+      "image": "/assets/food-service/azeite-extra-virgem.webp",
       "sizes": "2L",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1455,7 +1455,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Mel – Divino",
-      "image": "/assets/food-service/mel-divino.jpeg",
+      "image": "/assets/food-service/mel-divino.webp",
       "sizes": "400g | Caixa - 24 unidades",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1463,7 +1463,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Vinho Branco Seco Niágara",
-      "image": "/assets/food-service/vinho-branco-seco-niagara.jpeg",
+      "image": "/assets/food-service/vinho-branco-seco-niagara.webp",
       "sizes": "3.6L",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1471,7 +1471,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tahine – Pasta de Gergelim",
-      "image": "/assets/food-service/tahine-pasta-de-gergelim.jpeg",
+      "image": "/assets/food-service/tahine-pasta-de-gergelim.webp",
       "sizes": "500g | Caixa - 12 unidades",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1479,7 +1479,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Vinho Tinto Suave",
-      "image": "/assets/food-service/vinho-tinto-suave.jpeg",
+      "image": "/assets/food-service/vinho-tinto-suave.webp",
       "sizes": "4.6L",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1487,7 +1487,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Champignon Fatiado",
-      "image": "/assets/food-service/champignon-fatiado.jpeg",
+      "image": "/assets/food-service/champignon-fatiado.webp",
       "sizes": "1Kg",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1495,7 +1495,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Tahine – Pasta de gergelim",
-      "image": "/assets/food-service/tahine-pasta-de-gergelim-2.jpeg",
+      "image": "/assets/food-service/tahine-pasta-de-gergelim-2.webp",
       "sizes": "250g | Caixa - 24 unidades",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1503,7 +1503,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Vinho Tinto Seco Bordô",
-      "image": "/assets/food-service/vinho-tinto-seco-bordo.png",
+      "image": "/assets/food-service/vinho-tinto-seco-bordo.webp",
       "sizes": "1.5L | 4.6L | 750ml",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1511,7 +1511,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Café Alvorada",
-      "image": "/assets/food-service/cafe-alvorada.jpeg",
+      "image": "/assets/food-service/cafe-alvorada.webp",
       "sizes": "500g | Caixa - 20 unidades",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1519,7 +1519,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cereja Marrasquino com Cabo",
-      "image": "/assets/food-service/cereja-marrasquino-com-cabo.png",
+      "image": "/assets/food-service/cereja-marrasquino-com-cabo.webp",
       "sizes": "2",
       "category": "food-service",
       "categoryName": "Food Service",
@@ -1527,7 +1527,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Açúcar de Coco",
-      "image": "/assets/refrescos-e-sobremesas/acucar-de-coco.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/acucar-de-coco.webp",
       "sizes": "100g | 1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1535,7 +1535,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Canjica Branca",
-      "image": "/assets/refrescos-e-sobremesas/canjica-branca.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/canjica-branca.webp",
       "sizes": "Saca 25Kg | 500g",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1543,7 +1543,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "AÇUCAR MASCAVO",
-      "image": "/assets/refrescos-e-sobremesas/acucar-mascavo.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/acucar-mascavo.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1551,7 +1551,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Flocos de Milho com Açúcar",
-      "image": "/assets/refrescos-e-sobremesas/flocos-de-milho-com-acucar.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/flocos-de-milho-com-acucar.webp",
       "sizes": "1Kg | 10Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1559,7 +1559,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cereal Chokos",
-      "image": "/assets/refrescos-e-sobremesas/cereal-chokos.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/cereal-chokos.webp",
       "sizes": "1005Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1567,7 +1567,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Açúcar Refinado",
-      "image": "/assets/refrescos-e-sobremesas/acucar-refinado.png",
+      "image": "/assets/refrescos-e-sobremesas/acucar-refinado.webp",
       "sizes": "1Kg | 5Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1575,7 +1575,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina de Framboesa",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-de-framboesa.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-de-framboesa.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1583,7 +1583,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina Abacaxi",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-abacaxi.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-abacaxi.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1591,7 +1591,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina Cereja",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-cereja.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-cereja.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1599,7 +1599,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Chocolate em Pó 50% Cacau",
-      "image": "/assets/refrescos-e-sobremesas/chocolate-em-po-50-cacau.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/chocolate-em-po-50-cacau.webp",
       "sizes": "1Kg | 10Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1607,7 +1607,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina de Morango",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-de-morango.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-de-morango.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1615,7 +1615,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina de Uva",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-de-uva.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-de-uva.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1623,7 +1623,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Granola Tradicional",
-      "image": "/assets/refrescos-e-sobremesas/granola-tradicional.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/granola-tradicional.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1631,7 +1631,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina de Pessêgo",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-de-pessego.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-de-pessego.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1639,7 +1639,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Cereal Colorido",
-      "image": "/assets/refrescos-e-sobremesas/cereal-colorido.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/cereal-colorido.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1647,7 +1647,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina Incolor",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-incolor.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-incolor.webp",
       "sizes": "100g | 1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1655,7 +1655,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Granulado Preto",
-      "image": "/assets/refrescos-e-sobremesas/granulado-preto.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/granulado-preto.webp",
       "sizes": "100g | 101Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1663,7 +1663,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Refresco de Laranja",
-      "image": "/assets/refrescos-e-sobremesas/refresco-de-laranja.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/refresco-de-laranja.webp",
       "sizes": "500g | 1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1671,7 +1671,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Gelatina de Limão",
-      "image": "/assets/refrescos-e-sobremesas/gelatina-de-limao.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/gelatina-de-limao.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1679,7 +1679,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Sagu",
-      "image": "/assets/refrescos-e-sobremesas/sagu.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/sagu.webp",
       "sizes": "500g | 1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1687,7 +1687,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Xilitol",
-      "image": "/assets/refrescos-e-sobremesas/xilitol.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/xilitol.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1695,7 +1695,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Refresco Limão",
-      "image": "/assets/refrescos-e-sobremesas/refresco-de-limao.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/refresco-de-limao.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1703,7 +1703,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Flocos de Milho sem Açúcar",
-      "image": "/assets/refrescos-e-sobremesas/flocos-de-milho-sem-acucar.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/flocos-de-milho-sem-acucar.webp",
       "sizes": "Caixa - 8 Kg | 1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1711,7 +1711,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Refresco de Maracujá",
-      "image": "/assets/refrescos-e-sobremesas/refresco-de-maracuja.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/refresco-de-maracuja.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1719,7 +1719,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Refresco de Abacaxi",
-      "image": "/assets/refrescos-e-sobremesas/refresco-de-abacaxi.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/refresco-de-abacaxi.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
@@ -1727,7 +1727,7 @@ window.LUZAGO_CATALOG = {
     },
     {
       "name": "Açúcar Demerara",
-      "image": "/assets/refrescos-e-sobremesas/acucar-demerara.jpeg",
+      "image": "/assets/refrescos-e-sobremesas/acucar-demerara.webp",
       "sizes": "1Kg",
       "category": "refrescos",
       "categoryName": "Refrescos e Sobremesas",
