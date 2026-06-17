@@ -57,11 +57,13 @@ var CONFIG = {
     ],
     curriculo: [
       'Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Arquivo (link)', 'Nome do arquivo',
-      'UTM Source', 'UTM Campaign', 'Página', 'Referrer', 'GCLID'
+      'UTM Source', 'UTM Medium', 'UTM Campaign', 'UTM Term', 'UTM Content',
+      'Página', 'Referrer', 'GCLID'
     ],
     fornecedor: [
       'Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Mensagem',
-      'UTM Source', 'UTM Campaign', 'Página', 'Referrer', 'GCLID'
+      'UTM Source', 'UTM Medium', 'UTM Campaign', 'UTM Term', 'UTM Content',
+      'Página', 'Referrer', 'GCLID'
     ]
   }
 };
@@ -203,7 +205,10 @@ function buildRow(leadType, submittedAt, fields, source) {
       fileUrl,
       fileName,
       source.utm_source || '',
+      source.utm_medium || '',
       source.utm_campaign || '',
+      source.utm_term || '',
+      source.utm_content || '',
       source.page || '',
       source.referrer || '',
       source.gclid || ''
@@ -218,7 +223,10 @@ function buildRow(leadType, submittedAt, fields, source) {
       fields.telefone || '',
       fields.mensagem || '',
       source.utm_source || '',
+      source.utm_medium || '',
       source.utm_campaign || '',
+      source.utm_term || '',
+      source.utm_content || '',
       source.page || '',
       source.referrer || '',
       source.gclid || ''
