@@ -51,7 +51,7 @@
         "accountId": "0",
         "containerId": "0",
         "triggerId": "10",
-        "name": "CE - lead_form_submit",
+        "name": "CE - lead comercial (conversao)",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
           {
@@ -59,6 +59,15 @@
             "parameter": [
               { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
               { "type": "TEMPLATE", "key": "arg1", "value": "lead_form_submit" }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{DLV - lead_type}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "comercial" }
             ]
           }
         ],
@@ -76,6 +85,19 @@
           { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
           { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
           { "type": "TEMPLATE", "key": "name", "value": "termo_pesquisa" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "2",
+        "name": "DLV - lead_type",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "lead_type" }
         ],
         "fingerprint": "0"
       }

@@ -1,7 +1,11 @@
 # GTM — Conversão de Lead (Google Ads)
 
-Dispara a conversão do Google Ads **somente após o envio de um formulário de lead
-ser confirmado com sucesso** (comercial, currículo ou fornecedor).
+Dispara a conversão do Google Ads **somente após o envio do formulário de LEAD
+COMERCIAL** (pré-orçamento / contato comercial) ser confirmado com sucesso.
+
+> Os formulários **Trabalhe conosco** (currículo) e **Seja um fornecedor** também
+> enviam o evento `lead_form_submit` para o dataLayer (útil para análise), mas
+> **NÃO** contam como conversão — o acionador é filtrado por `lead_type = comercial`.
 
 - **ID de conversão:** `11312135434`
 - **Rótulo de conversão:** `JCYlCK3N1M0cEIr6hZIq`
@@ -31,23 +35,31 @@ window.dataLayer.push({
 
 Isso cria:
 - Tag **Conversion Linker** (dispara em All Pages) — necessária para atribuir o clique
-- Trigger **CE - lead_form_submit** (Custom Event = `lead_form_submit`)
+- Trigger **CE - lead comercial (conversao)** — Custom Event `lead_form_submit`
+  **filtrado por `lead_type` igual a `comercial`**
 - Tag **Google Ads - Conversao Lead** (dispara no trigger acima)
+- Variável **DLV - lead_type** (usada na condição do acionador)
 - Variável **DLV - termo_pesquisa** (opcional, caso queira ver o termo no debug)
 
 ## Opção B — Criar manualmente (à prova de erros)
 
 1. **Tag → Conversion Linker** → acionador **All Pages** → salvar.
-2. **Acionador → Novo → Evento personalizado**
+2. **Variável → Nova → Variável da camada de dados**
+   - Nome da variável na camada de dados: `lead_type`
+   - Nome: `DLV - lead_type`
+3. **Acionador → Novo → Evento personalizado**
    - Nome do evento: `lead_form_submit`
-   - Nome: `CE - lead_form_submit`
-3. **Tag → Google Ads Conversion Tracking**
+   - Este acionador é acionado em: **Alguns eventos personalizados**
+   - Condição: `DLV - lead_type` **igual a** `comercial`
+   - Nome: `CE - lead comercial (conversao)`
+4. **Tag → Google Ads Conversion Tracking**
    - ID de conversão: `11312135434`
    - Rótulo de conversão: `JCYlCK3N1M0cEIr6hZIq`
-   - Acionador: `CE - lead_form_submit`
-4. **Visualizar (Preview)** → envie um formulário de teste → confirme que a tag
-   "Google Ads - Conversao Lead" disparou **1x** no evento `lead_form_submit`.
-5. **Enviar/Publicar**.
+   - Acionador: `CE - lead comercial (conversao)`
+5. **Visualizar (Preview)**:
+   - Envie o form de **contato comercial** → a tag deve disparar **1x**.
+   - Envie o form de **currículo** ou **fornecedor** → a tag **NÃO** deve disparar.
+6. **Enviar/Publicar**.
 
 ## Verificação
 

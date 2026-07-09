@@ -107,8 +107,10 @@
         }
     }
 
-    // Dispara a conversão do Google Ads no GTM — SOMENTE após o envio do lead
-    // ser confirmado com sucesso. A tag de conversão no GTM escuta este evento.
+    // Envia o evento ao dataLayer SOMENTE após o envio ser confirmado com sucesso.
+    // Todos os formulários emitem 'lead_form_submit', mas a conversão do Google Ads
+    // no GTM é filtrada por lead_type = 'comercial' (só o lead comercial converte;
+    // currículo e fornecedor não contam como conversão).
     function pushConversionEvent(leadType, termo) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
