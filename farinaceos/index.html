@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/webp" href="/assets/icones/favicon-folha-luzago.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luzago Alimentos | Soluções em alimentos para o seu negócio</title>
-    <meta name="description" content="A Luzago Alimentos é uma distribuidora focada no mercado atacadista oferecendo soluções em grãos, temperos e ingredientes.">
+    <title>Farináceos e Farinhas para Atacado | Luzago Alimentos</title>
+    <meta name="description" content="Farinhas e farináceos para padarias, food service e revenda. Distribuição no atacado em Curitiba e região metropolitana. Solicite seu orçamento.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,11 +151,18 @@
     <!-- Products Grid -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div class="mb-8 max-w-xl mx-auto">
+                <label for="produto-search" class="sr-only">Buscar produto</label>
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true"></i>
+                    <input type="search" id="produto-search" data-product-search placeholder="Buscar produto pelo nome..." class="w-full pl-11 pr-4 py-3 rounded-full border border-gray-200 bg-white shadow-sm focus:outline-none focus:border-luzago-green text-sm">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6" data-product-grid>
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/amido-de-milho.webp" alt="Amido de Milho" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/amido-de-milho.webp" alt="Amido de Milho" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Amido de Milho</h3>
                     <div class="mt-auto w-full">
@@ -165,7 +172,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/aveia-em-flocos-fina.webp" alt="Aveia em Flocos Fina" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/aveia-em-flocos-fina.webp" alt="Aveia em Flocos Fina" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Aveia em Flocos Fina</h3>
                     <div class="mt-auto w-full">
@@ -175,7 +182,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/aveia-em-flocos-grossa.webp" alt="Aveia em Flocos Grossa" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/aveia-em-flocos-grossa.webp" alt="Aveia em Flocos Grossa" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Aveia em Flocos Grossa</h3>
                     <div class="mt-auto w-full">
@@ -185,7 +192,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/aveia-em-flocos-media.webp" alt="Aveia em Flocos Média" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/aveia-em-flocos-media.webp" alt="Aveia em Flocos Média" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Aveia em Flocos Média</h3>
                     <div class="mt-auto w-full">
@@ -195,7 +202,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/batata-em-flocos.webp" alt="Batata em Flocos" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/batata-em-flocos.webp" alt="Batata em Flocos" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Batata em Flocos</h3>
                     <div class="mt-auto w-full">
@@ -205,7 +212,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/colageno-hidrolisado.webp" alt="Colágeno Hidrolisado" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/colageno-hidrolisado.webp" alt="Colágeno Hidrolisado" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Colágeno Hidrolisado</h3>
                     <div class="mt-auto w-full">
@@ -215,7 +222,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farelo-de-aveia.webp" alt="Farelo de Aveia" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farelo-de-aveia.webp" alt="Farelo de Aveia" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farelo de Aveia</h3>
                     <div class="mt-auto w-full">
@@ -225,7 +232,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-amendoim.webp" alt="Farinha de Amendoim" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-amendoim.webp" alt="Farinha de Amendoim" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Amendoim</h3>
                     <div class="mt-auto w-full">
@@ -235,7 +242,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-arroz.webp" alt="Farinha de Arroz" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-arroz.webp" alt="Farinha de Arroz" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Arroz</h3>
                     <div class="mt-auto w-full">
@@ -245,7 +252,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-arroz-integral.webp" alt="Farinha de Arroz Integral" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-arroz-integral.webp" alt="Farinha de Arroz Integral" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Arroz Integral</h3>
                     <div class="mt-auto w-full">
@@ -255,7 +262,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-aveia.webp" alt="Farinha de Aveia" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-aveia.webp" alt="Farinha de Aveia" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Aveia</h3>
                     <div class="mt-auto w-full">
@@ -265,7 +272,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-castanha-de-caju.webp" alt="Farinha de Castanha de Caju" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-castanha-de-caju.webp" alt="Farinha de Castanha de Caju" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Castanha de Caju</h3>
                     <div class="mt-auto w-full">
@@ -275,7 +282,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-linhaca-dourada.webp" alt="Farinha de Linhaça Dourada" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-linhaca-dourada.webp" alt="Farinha de Linhaça Dourada" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Linhaça Dourada</h3>
                     <div class="mt-auto w-full">
@@ -285,7 +292,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-linhaca-marrom.webp" alt="Farinha de Linhaça Marrom" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-linhaca-marrom.webp" alt="Farinha de Linhaça Marrom" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Linhaça Marrom</h3>
                     <div class="mt-auto w-full">
@@ -305,7 +312,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-mandioca-extra-fina.webp" alt="Farinha de Mandioca Extra Fina" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-mandioca-extra-fina.webp" alt="Farinha de Mandioca Extra Fina" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Mandioca Extra Fina</h3>
                     <div class="mt-auto w-full">
@@ -315,7 +322,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-mandioca-torrada.webp" alt="Farinha de Mandioca Torrada" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-mandioca-torrada.webp" alt="Farinha de Mandioca Torrada" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Mandioca Torrada</h3>
                     <div class="mt-auto w-full">
@@ -325,7 +332,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-milho-amarela.webp" alt="Farinha de Milho Amarela" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-milho-amarela.webp" alt="Farinha de Milho Amarela" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Milho Amarela</h3>
                     <div class="mt-auto w-full">
@@ -335,7 +342,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-milho-branca.webp" alt="Farinha de Milho Branca" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-milho-branca.webp" alt="Farinha de Milho Branca" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Milho Branca</h3>
                     <div class="mt-auto w-full">
@@ -345,7 +352,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-pao-luzago.webp" alt="Farinha de Pão Luzago" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-pao-luzago.webp" alt="Farinha de Pão Luzago" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Pão Luzago</h3>
                     <div class="mt-auto w-full">
@@ -355,7 +362,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-pao-especial.webp" alt="Farinha de Pão Especial" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-pao-especial.webp" alt="Farinha de Pão Especial" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Pão Especial</h3>
                     <div class="mt-auto w-full">
@@ -365,7 +372,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-trigo-0000.webp" alt="Farinha de Trigo 0000" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-trigo-0000.webp" alt="Farinha de Trigo 0000" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Trigo 0000</h3>
                     <div class="mt-auto w-full">
@@ -375,7 +382,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-trigo-especial.webp" alt="Farinha de Trigo Especial" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-trigo-especial.webp" alt="Farinha de Trigo Especial" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Trigo Especial</h3>
                     <div class="mt-auto w-full">
@@ -385,7 +392,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-trigo-semolina.webp" alt="Farinha de Trigo Semolina" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/farinha-de-trigo-semolina.webp" alt="Farinha de Trigo Semolina" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Farinha de Trigo Semolina</h3>
                     <div class="mt-auto w-full">
@@ -405,7 +412,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/fecula-de-batata.webp" alt="Fécula de Batata" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/fecula-de-batata.webp" alt="Fécula de Batata" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Fécula de Batata</h3>
                     <div class="mt-auto w-full">
@@ -415,7 +422,7 @@
 
                                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/farinaceos/fuba-amarelo.webp" alt="Fubá Amarelo" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/farinaceos/fuba-amarelo.webp" alt="Fubá Amarelo" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Fubá Amarelo</h3>
                     <div class="mt-auto w-full">
@@ -453,11 +460,12 @@
                     </div>
                 </div>
                                                                                 <div class="w-full md:text-center text-sm">
-                    <p class="mb-1 flex items-center md:justify-center gap-2"><i class="fa-solid fa-phone"></i> (41) 3668-7866</p>
                     <p class="mb-4 flex items-center md:justify-center gap-2"><i class="fa-solid fa-envelope"></i> sac@luzagoalimentos.com.br</p>
-                    <a href="https://wa.me/554136687866?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Luzago%20Alimentos%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-5 rounded transition text-sm">
-                        <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Fale no WhatsApp
-                    </a>
+                    <div class="flex flex-col gap-2 md:items-center">
+                        <a href="/contato/" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-headset" aria-hidden="true"></i> Contato comercial</a>
+                        <a href="/trabalhe-conosco/#curriculo" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Trabalhe conosco</a>
+                        <a href="/trabalhe-conosco/#fornecedor" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Seja um fornecedor</a>
+                    </div>
                 </div>
             </div>
             
@@ -475,7 +483,7 @@
         <div class="bg-luzago-green-dark py-4 text-xs">
             <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row justify-between items-center text-gray-300">
                 <p>© Luzago 2024 , todos os direitos reservados</p>
-                <p class="mt-2 md:mt-0">Desenvolvido por <a href="#" class="text-white hover:underline">Conceito Prime Marketing Digital</a></p>
+                <p class="mt-2 md:mt-0">Desenvolvido por <a href="https://conceitop.com.br" target="_blank" rel="noopener" class="text-white hover:underline">Conceito Prime Marketing Digital</a></p>
             </div>
         </div>
     </footer>
@@ -529,6 +537,7 @@
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/js/mobile-menu.js"></script>
+    <script src="/js/product-search.js"></script>
     <script src="/js/site-effects.js"></script>
 
 </body>

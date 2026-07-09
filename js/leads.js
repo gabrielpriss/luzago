@@ -17,29 +17,25 @@
     var WEBHOOK_SECRET = RUNTIME.sheetsWebhookSecret || '';
     var MAX_FILE_BYTES = 5 * 1024 * 1024;
 
-    function captureLeadSource() {
-        var params = new URLSearchParams(window.location.search);
-        var source = {
-            utm_source: params.get('utm_source') || '',
-            utm_medium: params.get('utm_medium') || '',
-            utm_campaign: params.get('utm_campaign') || '',
-            utm_term: params.get('utm_term') || '',
-            utm_content: params.get('utm_content') || '',
-            gclid: params.get('gclid') || '',
-            page: window.location.pathname,
-            referrer: document.referrer || '',
-            captured_at: new Date().toISOString()
-        };
+    // Único dado de origem que rastreamos: o termo de pesquisa do Google Ads.
+    // Ele chega pela URL via ValueTrack {keyword} (parâmetro utm_term).
+    // Guardamos em localStorage para que o termo persista mesmo que o usuário
+    // navegue para outra página antes de enviar o formulário.
+    var TERM_STORAGE_KEY = 'luzago_termo_pesquisa';
 
-        var hasTracking = source.utm_source || source.utm_campaign || source.gclid;
-        if (hasTracking || !sessionStorage.getItem('luzago_lead_source')) {
-            sessionStorage.setItem('luzago_lead_source', JSON.stringify(source));
+    function captureSearchTerm() {
+        var params = new URLSearchParams(window.location.search);
+        var term = (params.get('utm_term') || params.get('keyword') || '').trim();
+
+        if (term) {
+            try { localStorage.setItem(TERM_STORAGE_KEY, term); } catch (e) {}
+            return term;
         }
 
         try {
-            return JSON.parse(sessionStorage.getItem('luzago_lead_source') || '{}');
+            return localStorage.getItem(TERM_STORAGE_KEY) || '';
         } catch (e) {
-            return source;
+            return '';
         }
     }
 
@@ -111,9 +107,20 @@
         }
     }
 
+    // Dispara a conversão do Google Ads no GTM — SOMENTE após o envio do lead
+    // ser confirmado com sucesso. A tag de conversão no GTM escuta este evento.
+    function pushConversionEvent(leadType, termo) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: 'lead_form_submit',
+            lead_type: leadType,
+            termo_pesquisa: termo || ''
+        });
+    }
+
     async function submitLead(form) {
         var leadType = form.getAttribute('data-lead-form');
-        var source = captureLeadSource();
+        var termo = captureSearchTerm();
         var fields = formToObject(form);
         var arquivo = await readFileField(form);
 
@@ -123,7 +130,7 @@
 
         var payload = {
             lead_type: leadType,
-            source: source,
+            termo_pesquisa: termo,
             fields: fields,
             submitted_at: new Date().toISOString()
         };
@@ -159,6 +166,9 @@
             throw new Error((result && result.error) || 'Falha ao registrar o lead na planilha.');
         }
 
+        // Envio confirmado → registra a conversão no Google Ads (via GTM)
+        pushConversionEvent(leadType, termo);
+
         showMessage(form, 'success', 'Recebemos seu contato! Em breve nossa equipe retornará.');
         form.reset();
 
@@ -185,7 +195,7 @@
     }
 
     function initForms() {
-        captureLeadSource();
+        captureSearchTerm();
 
         document.querySelectorAll('form[data-lead-form]').forEach(function (form) {
             form.addEventListener('submit', function (e) {

@@ -1454,7 +1454,7 @@ window.LUZAGO_CATALOG = {
       "categoryPage": "/food-service/"
     },
     {
-      "name": "Mel – Divino",
+      "name": "Mel - Divino",
       "image": "/assets/food-service/mel-divino.webp",
       "sizes": "400g | Caixa - 24 unidades",
       "category": "food-service",
@@ -1470,7 +1470,7 @@ window.LUZAGO_CATALOG = {
       "categoryPage": "/food-service/"
     },
     {
-      "name": "Tahine – Pasta de Gergelim",
+      "name": "Tahine - Pasta de Gergelim",
       "image": "/assets/food-service/tahine-pasta-de-gergelim.webp",
       "sizes": "500g | Caixa - 12 unidades",
       "category": "food-service",
@@ -1494,7 +1494,7 @@ window.LUZAGO_CATALOG = {
       "categoryPage": "/food-service/"
     },
     {
-      "name": "Tahine – Pasta de gergelim",
+      "name": "Tahine - Pasta de gergelim",
       "image": "/assets/food-service/tahine-pasta-de-gergelim-2.webp",
       "sizes": "250g | Caixa - 24 unidades",
       "category": "food-service",

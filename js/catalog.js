@@ -17,20 +17,41 @@
         return (text || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
 
-    function getFilteredProducts() {
-        return data.products.filter(function (p) {
-            var matchCat = activeCategory === 'all' || p.category === activeCategory;
-            var matchSearch = !searchTerm || normalize(p.name).indexOf(searchTerm) !== -1;
-            return matchCat && matchSearch;
-        });
+    // Retorna o "peso" de correspondência da busca: 2 = começa com o termo,
+    // 1 = contém o termo, 0 = não corresponde. Usado para reordenar sem esconder.
+    function matchScore(product) {
+        if (!searchTerm) return 0;
+        var idx = normalize(product.name).indexOf(searchTerm);
+        if (idx === -1) return 0;
+        return idx === 0 ? 2 : 1;
+    }
+
+    // Produtos visíveis = filtrados apenas pela categoria ativa.
+    // Ao buscar, os que correspondem sobem para o topo, mas os demais permanecem.
+    function getVisibleProducts() {
+        var list = data.products
+            .map(function (p, i) { return { p: p, i: i }; })
+            .filter(function (o) {
+                return activeCategory === 'all' || o.p.category === activeCategory;
+            });
+
+        if (searchTerm) {
+            list.sort(function (a, b) {
+                return matchScore(b.p) - matchScore(a.p) || a.i - b.i;
+            });
+        }
+
+        return list.map(function (o) { return o.p; });
     }
 
     function productCard(product) {
         var imgClass = product.image.endsWith('.svg') ? 'w-16 h-16 object-contain opacity-80' : 'w-full h-full object-cover';
+        var isMatch = matchScore(product) > 0;
+        var highlight = isMatch ? ' ring-2 ring-luzago-yellow' : '';
         return (
-            '<div class="catalog-item product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100" data-category="' + product.category + '">' +
+            '<div class="catalog-item product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100' + highlight + '" data-category="' + product.category + '">' +
                 '<div class="product-item__img-wrap w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">' +
-                    '<img src="' + product.image + '" alt="' + product.name + '" class="img-lazy ' + imgClass + '" loading="lazy" decoding="async">' +
+                    '<img src="' + product.image + '" alt="' + product.name + '" width="128" height="128" class="img-lazy ' + imgClass + '" loading="lazy" decoding="async">' +
                 '</div>' +
                 '<span class="text-[10px] uppercase tracking-wider font-bold text-luzago-green mb-1">' + product.categoryName + '</span>' +
                 '<h3 class="text-base md:text-lg font-bold text-luzago-green-dark mb-3 leading-tight">' + product.name + '</h3>' +
@@ -42,15 +63,22 @@
         );
     }
 
-    function updateCount(total) {
+    function updateCount(total, matches) {
         if (!countEl) return;
+        if (searchTerm) {
+            countEl.textContent = matches === 1
+                ? '1 produto corresponde à busca (exibido no topo)'
+                : matches + ' produtos correspondem à busca (exibidos no topo)';
+            return;
+        }
         var label = total === 1 ? 'produto encontrado' : 'produtos encontrados';
         countEl.textContent = total + ' ' + label;
     }
 
     function render() {
-        var products = getFilteredProducts();
-        updateCount(products.length);
+        var products = getVisibleProducts();
+        var matches = products.filter(function (p) { return matchScore(p) > 0; }).length;
+        updateCount(products.length, matches);
 
         if (!grid) return;
 

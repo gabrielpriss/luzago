@@ -3,27 +3,31 @@
  * Luzago Alimentos — Leads do site → Google Sheets
  * ============================================================================
  *
+ * O QUE MUDOU (importante)
+ * ------------------------
+ * - A gravação agora é feita POR NOME DE COLUNA (cabeçalho), não por posição
+ *   fixa. Assim você pode ter colunas manuais de CRM (Vendedor, Situação,
+ *   Observações, etc.) em qualquer ordem que os leads caem sempre na coluna
+ *   certa e as colunas manuais NUNCA são sobrescritas.
+ * - Só rastreamos UM dado de origem: o TERMO DE PESQUISA do Google Ads.
+ *   Ele chega do site no campo "termo_pesquisa" e é gravado na coluna cujo
+ *   cabeçalho contenha "Term"/"Termo"/"Pesquisa" (ex.: "UTM Term").
+ *   Se essa coluna não existir na aba, o script a cria automaticamente.
+ *
  * PASSO A PASSO
  * -------------
- * 1. Crie uma planilha em https://sheets.google.com (ex.: "Leads Luzago")
- * 2. Na planilha: Extensões → Apps Script
- * 3. Apague o código padrão e cole ESTE arquivo inteiro
- * 4. Ajuste as constantes em CONFIG abaixo (principalmente SPREADSHEET_ID)
- * 5. Salve o projeto (Ctrl+S)
- * 6. No menu do editor: Executar → função "setupSheets" (autorize na 1ª vez)
- *    → Isso cria as 3 abas com cabeçalhos automaticamente
- * 7. Implantar → Nova implantação → Tipo: App da Web
- *    - Executar como: Eu
- *    - Quem tem acesso: Qualquer pessoa
- * 8. Copie a URL do Web App (termina em /exec)
- * 9. Cole a URL na Vercel: variável SHEETS_WEB_APP_URL
- *    (ou em .env local e rode: npm run build)
+ * 1. Abra a planilha → Extensões → Apps Script
+ * 2. Apague o código atual e cole ESTE arquivo inteiro
+ * 3. Confirme CONFIG.SPREADSHEET_ID abaixo
+ * 4. Salve (Ctrl+S)
+ * 5. Implantar → Gerenciar implantações → edite a implantação existente →
+ *    Nova versão → Implantar  (mantém a MESMA URL /exec já usada pelo site)
  *
  * FORMULÁRIOS DO SITE (data-lead-form)
  * ------------------------------------
  *   comercial  → aba "Leads Comerciais"   (home + contato)
- *   curriculo  → aba "Curriculos"         (trabalhe-conosco)
- *   fornecedor → aba "Fornecedores"       (trabalhe-conosco)
+ *   curriculo  → aba "Currículos"          (trabalhe-conosco)
+ *   fornecedor → aba "Fornecedores"        (trabalhe-conosco)
  */
 
 var CONFIG = {
@@ -49,22 +53,11 @@ var CONFIG = {
     fornecedor: ['Fornecedores', 'Fornecedor']
   },
 
+  /** Cabeçalhos usados APENAS quando a aba ainda não tem cabeçalho (setup inicial). */
   HEADERS: {
-    comercial: [
-      'Data/Hora', 'Empresa', 'E-mail', 'Telefone', 'Categoria', 'Produtos/Mensagem',
-      'UTM Source', 'UTM Medium', 'UTM Campaign', 'UTM Term', 'UTM Content',
-      'Página', 'Referrer', 'GCLID'
-    ],
-    curriculo: [
-      'Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Arquivo (link)', 'Nome do arquivo',
-      'UTM Source', 'UTM Medium', 'UTM Campaign', 'UTM Term', 'UTM Content',
-      'Página', 'Referrer', 'GCLID'
-    ],
-    fornecedor: [
-      'Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Mensagem',
-      'UTM Source', 'UTM Medium', 'UTM Campaign', 'UTM Term', 'UTM Content',
-      'Página', 'Referrer', 'GCLID'
-    ]
+    comercial: ['Data/Hora', 'Empresa', 'E-mail', 'Telefone', 'Categoria', 'Produtos/Mensagem', 'UTM Term'],
+    curriculo: ['Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Arquivo (link)', 'Nome do arquivo', 'UTM Term'],
+    fornecedor: ['Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Mensagem', 'UTM Term']
   }
 };
 
@@ -87,17 +80,19 @@ function doPost(e) {
 
     var leadType = data.lead_type || 'comercial';
     var sheet = getSheetForLeadType(leadType);
-    var sheetName = sheet.getName();
 
-    ensureHeaders(sheet, CONFIG.HEADERS[leadType] || CONFIG.HEADERS.comercial);
+    // Se a aba estiver sem cabeçalho, cria um padrão para este tipo de lead.
+    if (isSheetEmpty(sheet)) {
+      ensureHeaders(sheet, CONFIG.HEADERS[leadType] || CONFIG.HEADERS.comercial);
+    }
 
     var fields = data.fields || {};
-    var source = data.source || {};
-    var row = buildRow(leadType, data.submitted_at, fields, source);
+    // termo_pesquisa é o formato novo; source.utm_term mantém compatibilidade com envios antigos.
+    var termo = data.termo_pesquisa || (data.source && data.source.utm_term) || '';
 
-    sheet.appendRow(row);
+    appendLead(sheet, leadType, data.submitted_at, fields, termo);
 
-    return jsonResponse({ ok: true, sheet: sheetName });
+    return jsonResponse({ ok: true, sheet: sheet.getName() });
   } catch (err) {
     Logger.log('doPost erro: ' + err.message + '\n' + err.stack);
     return jsonResponse({ ok: false, error: err.message });
@@ -125,6 +120,80 @@ function doGet(e) {
     .setMimeType(ContentService.MimeType.TEXT);
 }
 
+// ─── Gravação por nome de coluna ─────────────────────────────────────────────
+
+/** Verdadeiro para cabeçalhos que representam o termo de pesquisa. */
+function isTermHeader(header) {
+  return /term|termo|pesquisa|keyword|palavra-?chave/i.test((header || '').toString());
+}
+
+/** Garante que exista uma coluna de termo de pesquisa; se faltar, cria "UTM Term". */
+function ensureTermColumn(sheet) {
+  var lastCol = sheet.getLastColumn() || 1;
+  var headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+  var lastNonEmpty = 0;
+
+  for (var i = 0; i < headers.length; i++) {
+    if ((headers[i] || '').toString().trim() !== '') lastNonEmpty = i + 1;
+    if (isTermHeader(headers[i])) return; // já existe uma coluna de termo
+  }
+
+  var col = lastNonEmpty + 1;
+  sheet.getRange(1, col)
+    .setValue('UTM Term')
+    .setFontWeight('bold')
+    .setBackground('#0f4c2c')
+    .setFontColor('#ffffff');
+}
+
+/**
+ * Monta a linha alinhada aos cabeçalhos existentes e acrescenta ao final.
+ * Colunas conhecidas recebem o valor; colunas manuais/CRM ficam em branco.
+ */
+function appendLead(sheet, leadType, submittedAt, fields, termo) {
+  var when = submittedAt ? new Date(submittedAt) : new Date();
+
+  var fileUrl = '';
+  var fileName = '';
+  if (leadType === 'curriculo') {
+    var fileInfo = fields._arquivo || {};
+    fileName = fileInfo.name || '';
+    if (fileInfo.base64 && fileInfo.name) {
+      fileUrl = saveCurriculoFile(fileInfo.name, fileInfo.mimeType || 'application/pdf', fileInfo.base64);
+    }
+  }
+
+  ensureTermColumn(sheet);
+
+  var lastCol = sheet.getLastColumn();
+  var headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+
+  var valueByHeader = {
+    'data/hora': when,
+    'empresa': fields.empresa || fields.nome || '',
+    'nome': fields.nome || fields.empresa || '',
+    'e-mail': fields.email || '',
+    'email': fields.email || '',
+    'telefone': fields.telefone || '',
+    'categoria': fields.categoria || '',
+    'produtos/mensagem': fields.produtos || fields.mensagem || '',
+    'produtos': fields.produtos || fields.mensagem || '',
+    'mensagem': fields.mensagem || fields.produtos || '',
+    'arquivo (link)': fileUrl,
+    'nome do arquivo': fileName
+  };
+
+  var row = headers.map(function (h) {
+    var key = (h || '').toString().trim();
+    if (isTermHeader(key)) return termo || '';
+    var lower = key.toLowerCase();
+    if (Object.prototype.hasOwnProperty.call(valueByHeader, lower)) return valueByHeader[lower];
+    return ''; // colunas manuais (Vendedor, Situação, Observações, etc.) não são tocadas
+  });
+
+  sheet.appendRow(row);
+}
+
 // ─── Configuração da planilha (rodar 1x manualmente) ───────────────────────
 
 function setupSheets() {
@@ -133,25 +202,18 @@ function setupSheets() {
 
   types.forEach(function (type) {
     var sheet = getSheetForLeadType(type);
-    ensureHeaders(sheet, CONFIG.HEADERS[type]);
+    if (isSheetEmpty(sheet)) {
+      ensureHeaders(sheet, CONFIG.HEADERS[type]);
+    } else {
+      ensureTermColumn(sheet); // aba já existe: apenas garante a coluna de termo
+    }
     sheet.setFrozenRows(1);
-    sheet.getRange(1, 1, 1, CONFIG.HEADERS[type].length)
-      .setFontWeight('bold')
-      .setBackground('#0f4c2c')
-      .setFontColor('#ffffff');
-    sheet.autoResizeColumns(1, CONFIG.HEADERS[type].length);
   });
 
-  // Remove aba padrão "Página1" se estiver vazia e existirem outras abas
-  var defaultSheet = ss.getSheetByName('Página1') || ss.getSheetByName('Sheet1');
-  if (defaultSheet && ss.getSheets().length > 3 && defaultSheet.getLastRow() <= 1) {
-    try { ss.deleteSheet(defaultSheet); } catch (ignore) {}
-  }
-
-  SpreadsheetApp.getUi().alert('Planilha configurada: 3 abas de leads prontas.');
+  SpreadsheetApp.getUi().alert('Planilha configurada: coluna de termo de pesquisa garantida em todas as abas.');
 }
 
-/** Menu na planilha: Luzago → Configurar abas de leads */
+/** Menu na planilha: Luzago → ... */
 function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu('Luzago')
@@ -167,12 +229,12 @@ function testWriteComercial() {
       contents: JSON.stringify({
         lead_type: 'comercial',
         submitted_at: new Date().toISOString(),
-        source: { page: '/teste-manual', utm_source: 'apps-script' },
+        termo_pesquisa: 'arroz integral atacado',
         fields: {
           empresa: 'Teste manual Apps Script',
           email: 'teste@luzago.com.br',
           telefone: '(41) 3668-7866',
-          categoria: 'temperos',
+          categoria: 'cereais',
           produtos: 'Lead de teste — pode apagar esta linha'
         }
       })
@@ -180,76 +242,7 @@ function testWriteComercial() {
   };
   var result = doPost(fakeEvent);
   Logger.log(result.getContent());
-  SpreadsheetApp.getUi().alert('Teste enviado! Verifique a aba "Leads Comerciais".');
-}
-
-// ─── Montagem das linhas ───────────────────────────────────────────────────
-
-function buildRow(leadType, submittedAt, fields, source) {
-  var when = submittedAt ? new Date(submittedAt) : new Date();
-
-  if (leadType === 'curriculo') {
-    var fileInfo = fields._arquivo || {};
-    var fileUrl = '';
-    var fileName = fileInfo.name || '';
-
-    if (fileInfo.base64 && fileInfo.name) {
-      fileUrl = saveCurriculoFile(fileInfo.name, fileInfo.mimeType || 'application/pdf', fileInfo.base64);
-    }
-
-    return [
-      when,
-      fields.nome || '',
-      fields.email || '',
-      fields.telefone || '',
-      fileUrl,
-      fileName,
-      source.utm_source || '',
-      source.utm_medium || '',
-      source.utm_campaign || '',
-      source.utm_term || '',
-      source.utm_content || '',
-      source.page || '',
-      source.referrer || '',
-      source.gclid || ''
-    ];
-  }
-
-  if (leadType === 'fornecedor') {
-    return [
-      when,
-      fields.nome || '',
-      fields.email || '',
-      fields.telefone || '',
-      fields.mensagem || '',
-      source.utm_source || '',
-      source.utm_medium || '',
-      source.utm_campaign || '',
-      source.utm_term || '',
-      source.utm_content || '',
-      source.page || '',
-      source.referrer || '',
-      source.gclid || ''
-    ];
-  }
-
-  // comercial (padrão)
-  return [
-    when,
-    fields.empresa || fields.nome || '',
-    fields.email || '',
-    fields.telefone || '',
-    fields.categoria || '',
-    fields.produtos || fields.mensagem || '',
-    source.utm_source || '',
-    source.utm_medium || '',
-    source.utm_campaign || '',
-    source.utm_term || '',
-    source.utm_content || '',
-    source.page || '',
-    source.referrer || '',
-    source.gclid || ''
-  ];
+  SpreadsheetApp.getUi().alert('Teste enviado! Verifique a aba "Leads Comerciais" (coluna do termo de pesquisa).');
 }
 
 // ─── Currículos no Google Drive ────────────────────────────────────────────
@@ -307,6 +300,10 @@ function getSheetForLeadType(leadType) {
     sheet = ss.insertSheet(canonical);
   }
   return sheet;
+}
+
+function isSheetEmpty(sheet) {
+  return (sheet.getRange(1, 1).getValue() || '').toString().trim() === '';
 }
 
 function ensureHeaders(sheet, headers) {

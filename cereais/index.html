@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/webp" href="/assets/icones/favicon-folha-luzago.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luzago Alimentos | Soluções em alimentos para o seu negócio</title>
-    <meta name="description" content="A Luzago Alimentos é uma distribuidora focada no mercado atacadista oferecendo soluções em grãos, temperos e ingredientes.">
+    <title>Cereais e Grãos para Atacado | Luzago Alimentos</title>
+    <meta name="description" content="Arroz, feijão, quinoa, grão de bico e grãos especiais para o atacado e food service. Distribuidora Luzago em Curitiba e região. Peça um orçamento.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,11 +151,18 @@
     <!-- Products Grid -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div class="mb-8 max-w-xl mx-auto">
+                <label for="produto-search" class="sr-only">Buscar produto</label>
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true"></i>
+                    <input type="search" id="produto-search" data-product-search placeholder="Buscar produto pelo nome..." class="w-full pl-11 pr-4 py-3 rounded-full border border-gray-200 bg-white shadow-sm focus:outline-none focus:border-luzago-green text-sm">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6" data-product-grid>
                 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/amendoim-cru.webp" alt="Amendoim Cru" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/amendoim-cru.webp" alt="Amendoim Cru" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Amendoim Cru</h3>
                     <div class="mt-auto w-full">
@@ -165,7 +172,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/amendoim-torrado-e-moido.webp" alt="Amendoim Torrado e Moído" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/amendoim-torrado-e-moido.webp" alt="Amendoim Torrado e Moído" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Amendoim Torrado e Moído</h3>
                     <div class="mt-auto w-full">
@@ -175,7 +182,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-arboreo.webp" alt="Arroz Arbóreo" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-arboreo.webp" alt="Arroz Arbóreo" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Arbóreo</h3>
                     <div class="mt-auto w-full">
@@ -185,7 +192,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-buriti-branco.webp" alt="Arroz Buriti Branco" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-buriti-branco.webp" alt="Arroz Buriti Branco" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Buriti Branco</h3>
                     <div class="mt-auto w-full">
@@ -195,7 +202,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-agulinha.webp" alt="Arroz Integral Agulinha" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-agulinha.webp" alt="Arroz Integral Agulinha" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Integral Agulinha</h3>
                     <div class="mt-auto w-full">
@@ -205,7 +212,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-cateto-branco.webp" alt="Arroz Integral Cateto Branco" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-cateto-branco.webp" alt="Arroz Integral Cateto Branco" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Integral Cateto Branco</h3>
                     <div class="mt-auto w-full">
@@ -215,7 +222,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-cateto-misto.webp" alt="Arroz Integral Cateto Misto" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-cateto-misto.webp" alt="Arroz Integral Cateto Misto" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Integral Cateto Misto</h3>
                     <div class="mt-auto w-full">
@@ -225,7 +232,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-cateto-vermelho.webp" alt="Arroz Integral Cateto Vermelho" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-cateto-vermelho.webp" alt="Arroz Integral Cateto Vermelho" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Integral Cateto Vermelho</h3>
                     <div class="mt-auto w-full">
@@ -235,7 +242,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-negro.webp" alt="Arroz Integral Negro" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-integral-negro.webp" alt="Arroz Integral Negro" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Integral Negro</h3>
                     <div class="mt-auto w-full">
@@ -245,7 +252,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/arroz-oito-graos.webp" alt="Arroz Oito Grãos" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/arroz-oito-graos.webp" alt="Arroz Oito Grãos" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Arroz Oito Grãos</h3>
                     <div class="mt-auto w-full">
@@ -255,7 +262,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/chia-hispanica-extra.webp" alt="Chia Hispânica Extra" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/chia-hispanica-extra.webp" alt="Chia Hispânica Extra" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Chia Hispânica Extra</h3>
                     <div class="mt-auto w-full">
@@ -265,7 +272,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/ervilha-partida.webp" alt="Ervilha Partida" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/ervilha-partida.webp" alt="Ervilha Partida" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Ervilha Partida</h3>
                     <div class="mt-auto w-full">
@@ -275,7 +282,7 @@
     
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/feijao-branco-argentino.webp" alt="Feijão Branco Argentino" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/feijao-branco-argentino.webp" alt="Feijão Branco Argentino" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Feijão Branco Argentino</h3>
                     <div class="mt-auto w-full">
@@ -285,7 +292,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/feijao-carioca-tipo-01-fardo.webp" alt="Feijão Carioca Tipo 01 Fardo" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/feijao-carioca-tipo-01-fardo.webp" alt="Feijão Carioca Tipo 01 Fardo" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Feijão Carioca Tipo 01 Fardo</h3>
                     <div class="mt-auto w-full">
@@ -295,7 +302,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/feijao-cavalo.webp" alt="Feijão Cavalo" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/feijao-cavalo.webp" alt="Feijão Cavalo" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Feijão Cavalo</h3>
                     <div class="mt-auto w-full">
@@ -305,7 +312,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/feijao-fradinho.webp" alt="Feijão Fradinho" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/feijao-fradinho.webp" alt="Feijão Fradinho" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Feijão Fradinho</h3>
                     <div class="mt-auto w-full">
@@ -315,7 +322,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/feijao-preto-tipo-01-fardo.webp" alt="Feijão Preto Tipo 01 Fardo" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/feijao-preto-tipo-01-fardo.webp" alt="Feijão Preto Tipo 01 Fardo" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Feijão Preto Tipo 01 Fardo</h3>
                     <div class="mt-auto w-full">
@@ -325,7 +332,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/gergelim-branco-sem-casca.webp" alt="Gergelim Branco sem Casca" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/gergelim-branco-sem-casca.webp" alt="Gergelim Branco sem Casca" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gergelim Branco sem Casca</h3>
                     <div class="mt-auto w-full">
@@ -335,7 +342,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/gergelim-preto.webp" alt="Gergelim Preto" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/gergelim-preto.webp" alt="Gergelim Preto" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gergelim Preto</h3>
                     <div class="mt-auto w-full">
@@ -345,7 +352,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/gergelim-torrado.webp" alt="Gergelim Torrado" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/gergelim-torrado.webp" alt="Gergelim Torrado" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Gergelim Torrado</h3>
                     <div class="mt-auto w-full">
@@ -355,7 +362,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/girassol-pepita-sem-casca.webp" alt="Girassol Pepita sem Casca" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/girassol-pepita-sem-casca.webp" alt="Girassol Pepita sem Casca" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Girassol Pepita sem Casca</h3>
                     <div class="mt-auto w-full">
@@ -365,7 +372,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/goma-de-tapioca-hidratada-massa-pronta.webp" alt="Goma de Tapioca Hidratada (Massa Pronta)" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/goma-de-tapioca-hidratada-massa-pronta.webp" alt="Goma de Tapioca Hidratada (Massa Pronta)" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Goma de Tapioca Hidratada (Massa Pronta)</h3>
                     <div class="mt-auto w-full">
@@ -375,7 +382,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/grao-de-bico-12mm.webp" alt="Grão de Bico 12mm" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/grao-de-bico-12mm.webp" alt="Grão de Bico 12mm" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Grão de Bico 12mm</h3>
                     <div class="mt-auto w-full">
@@ -385,7 +392,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/grao-de-bico-9mm.webp" alt="Grão de Bico 9mm" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/grao-de-bico-9mm.webp" alt="Grão de Bico 9mm" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Grão de Bico 9mm</h3>
                     <div class="mt-auto w-full">
@@ -395,7 +402,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/lentilha-canadense.webp" alt="Lentilha Canadense" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/lentilha-canadense.webp" alt="Lentilha Canadense" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Lentilha Canadense</h3>
                     <div class="mt-auto w-full">
@@ -405,7 +412,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/linhaca-dourada.webp" alt="Linhaça Dourada" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/linhaca-dourada.webp" alt="Linhaça Dourada" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Linhaça Dourada</h3>
                     <div class="mt-auto w-full">
@@ -415,7 +422,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/linhaca-marrom.webp" alt="Linhaça Marrom" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/linhaca-marrom.webp" alt="Linhaça Marrom" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Linhaça Marrom</h3>
                     <div class="mt-auto w-full">
@@ -425,7 +432,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/pipoca-americana.webp" alt="Pipoca Americana" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/pipoca-americana.webp" alt="Pipoca Americana" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Pipoca Americana</h3>
                     <div class="mt-auto w-full">
@@ -435,7 +442,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/proteina-de-soja-caramelo-pts.webp" alt="Proteína de Soja Caramelo (PTS)" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/proteina-de-soja-caramelo-pts.webp" alt="Proteína de Soja Caramelo (PTS)" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Proteína de Soja Caramelo (PTS)</h3>
                     <div class="mt-auto w-full">
@@ -445,7 +452,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/proteina-de-soja-natural-pts.webp" alt="Proteína de Soja Natural (PTS)" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/proteina-de-soja-natural-pts.webp" alt="Proteína de Soja Natural (PTS)" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Proteína de Soja Natural (PTS)</h3>
                     <div class="mt-auto w-full">
@@ -455,7 +462,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/quinoa-em-grao.webp" alt="Quinoa em Grão" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/quinoa-em-grao.webp" alt="Quinoa em Grão" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Quinoa em Grão</h3>
                     <div class="mt-auto w-full">
@@ -465,7 +472,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/quinoa-mista.webp" alt="Quinoa Mista" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/quinoa-mista.webp" alt="Quinoa Mista" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Quinoa Mista</h3>
                     <div class="mt-auto w-full">
@@ -475,7 +482,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/quinoa-preta-em-grao.webp" alt="Quinoa Preta em Grão" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/quinoa-preta-em-grao.webp" alt="Quinoa Preta em Grão" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Quinoa Preta em Grão</h3>
                     <div class="mt-auto w-full">
@@ -485,7 +492,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/quinoa-vermelha-em-grao.webp" alt="Quinoa Vermelha em Grão" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/quinoa-vermelha-em-grao.webp" alt="Quinoa Vermelha em Grão" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Quinoa Vermelha em Grão</h3>
                     <div class="mt-auto w-full">
@@ -495,7 +502,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/semente-de-abobora.webp" alt="Semente de Abóbora" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/semente-de-abobora.webp" alt="Semente de Abóbora" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Semente de Abóbora</h3>
                     <div class="mt-auto w-full">
@@ -505,7 +512,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/soja-em-grao.webp" alt="Soja em Grão" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/soja-em-grao.webp" alt="Soja em Grão" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Soja em Grão</h3>
                     <div class="mt-auto w-full">
@@ -515,7 +522,7 @@
 
                 <div class="product-item bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100">
                     <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 bg-gray-50 flex items-center justify-center shadow-inner">
-                        <img loading="lazy" decoding="async" src="/assets/cereais/trigo-em-grao.webp" alt="Trigo em Grão" class="img-lazy w-full h-full object-cover">
+                        <img width="128" height="128" loading="lazy" decoding="async" src="/assets/cereais/trigo-em-grao.webp" alt="Trigo em Grão" class="img-lazy w-full h-full object-cover">
                     </div>
                     <h3 class="text-lg font-bold text-luzago-green-dark mb-4">Trigo em Grão</h3>
                     <div class="mt-auto w-full">
@@ -554,11 +561,12 @@
                     </div>
                 </div>
                                                                                 <div class="w-full md:text-center text-sm">
-                    <p class="mb-1 flex items-center md:justify-center gap-2"><i class="fa-solid fa-phone"></i> (41) 3668-7866</p>
                     <p class="mb-4 flex items-center md:justify-center gap-2"><i class="fa-solid fa-envelope"></i> sac@luzagoalimentos.com.br</p>
-                    <a href="https://wa.me/554136687866?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Luzago%20Alimentos%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-5 rounded transition text-sm">
-                        <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Fale no WhatsApp
-                    </a>
+                    <div class="flex flex-col gap-2 md:items-center">
+                        <a href="/contato/" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-headset" aria-hidden="true"></i> Contato comercial</a>
+                        <a href="/trabalhe-conosco/#curriculo" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Trabalhe conosco</a>
+                        <a href="/trabalhe-conosco/#fornecedor" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Seja um fornecedor</a>
+                    </div>
                 </div>
             </div>
             
@@ -576,7 +584,7 @@
         <div class="bg-luzago-green-dark py-4 text-xs">
             <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row justify-between items-center text-gray-300">
                 <p>© Luzago 2024 , todos os direitos reservados</p>
-                <p class="mt-2 md:mt-0">Desenvolvido por <a href="#" class="text-white hover:underline">Conceito Prime Marketing Digital</a></p>
+                <p class="mt-2 md:mt-0">Desenvolvido por <a href="https://conceitop.com.br" target="_blank" rel="noopener" class="text-white hover:underline">Conceito Prime Marketing Digital</a></p>
             </div>
         </div>
     </footer>
@@ -630,6 +638,7 @@
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/js/mobile-menu.js"></script>
+    <script src="/js/product-search.js"></script>
     <script src="/js/site-effects.js"></script>
 
 </body>

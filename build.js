@@ -427,7 +427,7 @@ async function processHtml(htmlFiles, pagesCss) {
 
 function verifyCriticalScripts() {
   const checks = [
-    { file: 'js/leads.js', patterns: ['utm_source', 'luzago_lead_source', 'data-lead-form', 'sheetsWebAppUrl', 'text/plain'] },
+    { file: 'js/leads.js', patterns: ['utm_term', 'termo_pesquisa', 'lead_form_submit', 'data-lead-form', 'sheetsWebAppUrl', 'text/plain'] },
     { file: 'js/runtime-config.js', patterns: ['LUZAGO_RUNTIME', 'sheetsWebAppUrl'] },
     { file: 'js/mobile-menu.js', patterns: ['mobile-menu', 'aria-expanded'] },
     { file: 'js/catalog.js', patterns: ['LUZAGO_CATALOG', 'catalog-grid', 'data-filter'] },
