@@ -73,6 +73,8 @@
     <link rel="stylesheet" href="/css/effects.css">
     <link rel="stylesheet" href="/css/mobile-menu.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/whatsapp-widget.css">
+    <link rel="stylesheet" href="/css/whatsapp-gate.css">
 </head>
 <body class="font-sans text-gray-800 antialiased bg-gray-50">
     <!-- Google Tag Manager (noscript) -->
@@ -212,6 +214,7 @@
                                                                                 <div class="w-full md:text-center text-sm">
                     <p class="mb-4 flex items-center md:justify-center gap-2"><i class="fa-solid fa-envelope"></i> sac@luzagoalimentos.com.br</p>
                     <div class="flex flex-col gap-2 md:items-center">
+                        <a href="/contato/" data-wa-gate="rodape" class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp comercial</a>
                         <a href="/contato/" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-headset" aria-hidden="true"></i> Contato comercial</a>
                         <a href="/trabalhe-conosco/#curriculo" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Trabalhe conosco</a>
                         <a href="/trabalhe-conosco/#fornecedor" class="inline-flex items-center justify-center gap-2 bg-luzago-green hover:bg-luzago-green-dark text-white font-bold py-2.5 px-5 rounded transition text-sm w-full md:w-60"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Seja um fornecedor</a>
@@ -288,6 +291,16 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/js/mobile-menu.js"></script>
     <script src="/js/site-effects.js"></script>
+
+
+    <!-- WhatsApp flutuante — abre o formulário de qualificação antes de levar ao WhatsApp -->
+    <a href="/contato/" data-wa-gate="flutuante" class="luzago-wa-widget" aria-label="Falar com o comercial no WhatsApp">
+        <div class="luzago-wa-widget__btn"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="luzago-wa-widget__cta">Fale com o comercial</div>
+    </a>
+    <script src="/js/runtime-config.js"></script>
+    <script src="/js/leads.js"></script>
+    <script src="/js/whatsapp-gate.js"></script>
 
 </body>
 </html>

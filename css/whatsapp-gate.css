@@ -1,0 +1,330 @@
+/* ==========================================================================
+   Luzago Alimentos — Gate de qualificação antes do WhatsApp
+   Todo destino de WhatsApp abre este modal. O lead vai para a MESMA planilha
+   do formulário comercial e só então o visitante é levado ao WhatsApp.
+   Fornecedores e currículos são desviados para /trabalhe-conosco/.
+   ========================================================================== */
+
+.wa-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    font-family: 'Noto Serif', serif;
+}
+
+.wa-gate.is-open {
+    display: flex;
+}
+
+.wa-gate__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 76, 44, 0.55);
+    backdrop-filter: blur(2px);
+}
+
+.wa-gate__panel {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    animation: wa-gate-in 0.22s ease-out;
+}
+
+@keyframes wa-gate-in {
+    from { opacity: 0; transform: translateY(16px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.wa-gate__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #25D366;
+    color: #ffffff;
+    padding: 18px 52px 18px 20px;
+    border-radius: 16px 16px 0 0;
+}
+
+.wa-gate__header i {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.wa-gate__title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.wa-gate__subtitle {
+    font-size: 12.5px;
+    opacity: 0.92;
+    margin-top: 2px;
+}
+
+.wa-gate__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.wa-gate__close:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.wa-gate__body {
+    padding: 22px 20px 24px;
+}
+
+.wa-gate__step { display: none; }
+.wa-gate__step.is-active { display: block; }
+
+.wa-gate__lead {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.55;
+    margin-bottom: 16px;
+}
+
+/* --- Etapa 1: motivo do contato --- */
+
+.wa-gate__options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wa-gate__option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    padding: 14px 16px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #2c2a29;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+.wa-gate__option:hover {
+    border-color: #197c45;
+    background: #f4faf6;
+    transform: translateY(-1px);
+}
+
+.wa-gate__option i {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #197c45;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.wa-gate__option small {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* --- Etapa 2: formulário --- */
+
+.wa-gate__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 520px) {
+    .wa-gate__grid { grid-template-columns: 1fr; }
+}
+
+.wa-gate__field { margin-bottom: 12px; }
+
+.wa-gate__field label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.wa-gate__field label span { color: #d52b1e; }
+
+.wa-gate__field input,
+.wa-gate__field select,
+.wa-gate__field textarea {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #374151;
+    background: #ffffff;
+    transition: border-color 0.18s ease;
+}
+
+.wa-gate__field textarea { resize: none; }
+
+.wa-gate__field input:focus,
+.wa-gate__field select:focus,
+.wa-gate__field textarea:focus {
+    outline: none;
+    border-color: #197c45;
+}
+
+.wa-gate__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 6px;
+    padding: 13px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: #25D366;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.18s ease;
+}
+
+.wa-gate__submit:hover { background: #20bd5a; }
+.wa-gate__submit:disabled { background: #9ca3af; cursor: not-allowed; }
+
+.wa-gate__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+    border: 0;
+    background: none;
+    padding: 0;
+    color: #197c45;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.wa-gate__back:hover { text-decoration: underline; }
+
+.wa-gate__note {
+    margin-top: 14px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fdf3f2;
+    border: 1px solid #f6d5d2;
+    color: #8a1d15;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.wa-gate__note a {
+    color: #d52b1e;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.wa-gate__message {
+    margin-top: 14px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.wa-gate__message--error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.wa-gate__message--success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+/* --- Etapa de desvio (fornecedor / currículo) e sucesso --- */
+
+.wa-gate__redirect {
+    text-align: center;
+}
+
+.wa-gate__redirect i {
+    font-size: 40px;
+    color: #197c45;
+    margin-bottom: 12px;
+}
+
+.wa-gate__redirect h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2c2a29;
+    margin-bottom: 8px;
+}
+
+.wa-gate__redirect p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.wa-gate__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: #197c45;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14.5px;
+    text-decoration: none;
+    transition: background 0.18s ease;
+}
+
+.wa-gate__cta:hover { background: #0f4c2c; }
+.wa-gate__cta--wa { background: #25D366; }
+.wa-gate__cta--wa:hover { background: #20bd5a; }
+
+body.wa-gate-open { overflow: hidden; }

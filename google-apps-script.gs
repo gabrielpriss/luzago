@@ -25,9 +25,16 @@
  *
  * FORMULÁRIOS DO SITE (data-lead-form)
  * ------------------------------------
- *   comercial  → aba "Leads Comerciais"   (home + contato)
+ *   comercial  → aba "Leads Comerciais"   (home + contato + gate do WhatsApp)
  *   curriculo  → aba "Currículos"          (trabalhe-conosco)
  *   fornecedor → aba "Fornecedores"        (trabalhe-conosco)
+ *
+ * COLUNA "ORIGEM"
+ * ---------------
+ * Os leads passaram a informar de onde vieram no campo "origem":
+ *   "Formulário" → formulário da página (home / contato / trabalhe-conosco)
+ *   "WhatsApp"   → formulário que abre ao clicar em qualquer botão de WhatsApp
+ * A coluna "Origem" é criada automaticamente na aba caso ainda não exista.
  */
 
 var CONFIG = {
@@ -55,9 +62,9 @@ var CONFIG = {
 
   /** Cabeçalhos usados APENAS quando a aba ainda não tem cabeçalho (setup inicial). */
   HEADERS: {
-    comercial: ['Data/Hora', 'Empresa', 'E-mail', 'Telefone', 'Categoria', 'Produtos/Mensagem', 'UTM Term'],
-    curriculo: ['Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Arquivo (link)', 'Nome do arquivo', 'UTM Term'],
-    fornecedor: ['Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Mensagem', 'UTM Term']
+    comercial: ['Data/Hora', 'Empresa', 'E-mail', 'Telefone', 'Categoria', 'Produtos/Mensagem', 'Origem', 'UTM Term'],
+    curriculo: ['Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Arquivo (link)', 'Nome do arquivo', 'Origem', 'UTM Term'],
+    fornecedor: ['Data/Hora', 'Nome', 'E-mail', 'Telefone', 'Mensagem', 'Origem', 'UTM Term']
   }
 };
 
@@ -127,23 +134,37 @@ function isTermHeader(header) {
   return /term|termo|pesquisa|keyword|palavra-?chave/i.test((header || '').toString());
 }
 
-/** Garante que exista uma coluna de termo de pesquisa; se faltar, cria "UTM Term". */
-function ensureTermColumn(sheet) {
+/** Verdadeiro para cabeçalhos que representam a origem do lead. */
+function isOriginHeader(header) {
+  return /^\s*(origem|origin|fonte|canal)\s*$/i.test((header || '').toString());
+}
+
+/** Acrescenta um cabeçalho ao final da aba se nenhuma coluna casar com matchFn. */
+function ensureColumn(sheet, matchFn, headerName) {
   var lastCol = sheet.getLastColumn() || 1;
   var headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
   var lastNonEmpty = 0;
 
   for (var i = 0; i < headers.length; i++) {
     if ((headers[i] || '').toString().trim() !== '') lastNonEmpty = i + 1;
-    if (isTermHeader(headers[i])) return; // já existe uma coluna de termo
+    if (matchFn(headers[i])) return; // a coluna já existe
   }
 
-  var col = lastNonEmpty + 1;
-  sheet.getRange(1, col)
-    .setValue('UTM Term')
+  sheet.getRange(1, lastNonEmpty + 1)
+    .setValue(headerName)
     .setFontWeight('bold')
     .setBackground('#0f4c2c')
     .setFontColor('#ffffff');
+}
+
+/** Garante que exista uma coluna de termo de pesquisa; se faltar, cria "UTM Term". */
+function ensureTermColumn(sheet) {
+  ensureColumn(sheet, isTermHeader, 'UTM Term');
+}
+
+/** Garante que exista uma coluna de origem do lead; se faltar, cria "Origem". */
+function ensureOriginColumn(sheet) {
+  ensureColumn(sheet, isOriginHeader, 'Origem');
 }
 
 /**
@@ -164,6 +185,7 @@ function appendLead(sheet, leadType, submittedAt, fields, termo) {
   }
 
   ensureTermColumn(sheet);
+  ensureOriginColumn(sheet);
 
   var lastCol = sheet.getLastColumn();
   var headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
@@ -180,12 +202,14 @@ function appendLead(sheet, leadType, submittedAt, fields, termo) {
     'produtos': fields.produtos || fields.mensagem || '',
     'mensagem': fields.mensagem || fields.produtos || '',
     'arquivo (link)': fileUrl,
-    'nome do arquivo': fileName
+    'nome do arquivo': fileName,
+    'origem': fields.origem || 'Formulário'
   };
 
   var row = headers.map(function (h) {
     var key = (h || '').toString().trim();
     if (isTermHeader(key)) return termo || '';
+    if (isOriginHeader(key)) return fields.origem || 'Formulário';
     var lower = key.toLowerCase();
     if (Object.prototype.hasOwnProperty.call(valueByHeader, lower)) return valueByHeader[lower];
     return ''; // colunas manuais (Vendedor, Situação, Observações, etc.) não são tocadas
@@ -205,12 +229,13 @@ function setupSheets() {
     if (isSheetEmpty(sheet)) {
       ensureHeaders(sheet, CONFIG.HEADERS[type]);
     } else {
-      ensureTermColumn(sheet); // aba já existe: apenas garante a coluna de termo
+      ensureTermColumn(sheet);   // aba já existe: apenas garante as colunas novas
+      ensureOriginColumn(sheet);
     }
     sheet.setFrozenRows(1);
   });
 
-  SpreadsheetApp.getUi().alert('Planilha configurada: coluna de termo de pesquisa garantida em todas as abas.');
+  SpreadsheetApp.getUi().alert('Planilha configurada: colunas de termo de pesquisa e de origem garantidas em todas as abas.');
 }
 
 /** Menu na planilha: Luzago → ... */
@@ -235,6 +260,7 @@ function testWriteComercial() {
           email: 'teste@luzago.com.br',
           telefone: '(41) 3668-7866',
           categoria: 'cereais',
+          origem: 'WhatsApp',
           produtos: 'Lead de teste — pode apagar esta linha'
         }
       })

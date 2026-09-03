@@ -8,6 +8,10 @@
  *   comercial  → Leads Comerciais
  *   curriculo  → Curriculos (+ arquivo no Drive)
  *   fornecedor → Fornecedores
+ *
+ * O gate do WhatsApp (js/whatsapp-gate.js) reaproveita este módulo: envia um
+ * lead "comercial" com o campo origem = "WhatsApp" e, no evento
+ * 'luzago:lead-success', redireciona o visitante para o WhatsApp.
  */
 (function () {
     'use strict';
@@ -94,16 +98,20 @@
         box.hidden = false;
     }
 
+    // Preserva o conteúdo original do botão (inclusive ícones) ao alternar o
+    // estado de envio — o gate do WhatsApp usa um ícone dentro do botão.
     function setLoading(form, loading) {
         var btn = form.querySelector('[type="submit"]');
         if (!btn) return;
         if (loading) {
-            btn.dataset.originalText = btn.textContent;
+            if (btn.dataset.originalHtml === undefined) {
+                btn.dataset.originalHtml = btn.innerHTML;
+            }
             btn.disabled = true;
             btn.textContent = 'Enviando...';
         } else {
             btn.disabled = false;
-            btn.textContent = btn.dataset.originalText || 'Enviar';
+            btn.innerHTML = btn.dataset.originalHtml || 'Enviar';
         }
     }
 
@@ -111,11 +119,12 @@
     // Todos os formulários emitem 'lead_form_submit', mas a conversão do Google Ads
     // no GTM é filtrada por lead_type = 'comercial' (só o lead comercial converte;
     // currículo e fornecedor não contam como conversão).
-    function pushConversionEvent(leadType, termo) {
+    function pushConversionEvent(leadType, termo, origem) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             event: 'lead_form_submit',
             lead_type: leadType,
+            origem: origem || 'Formulário',
             termo_pesquisa: termo || ''
         });
     }
@@ -130,6 +139,9 @@
             fields._arquivo = arquivo;
         }
 
+        var origem = fields.origem || form.getAttribute('data-lead-origem') || 'Formulário';
+        fields.origem = origem;
+
         var payload = {
             lead_type: leadType,
             termo_pesquisa: termo,
@@ -143,8 +155,7 @@
 
         if (!SHEETS_WEB_APP_URL) {
             console.info('[Luzago Leads] SHEETS_WEB_APP_URL não configurada. Payload:', payload);
-            showMessage(form, 'success', 'Recebemos seu contato! Em breve nossa equipe retornará.');
-            form.reset();
+            finishSuccess(form, leadType, termo, origem, fields);
             return;
         }
 
@@ -169,10 +180,18 @@
         }
 
         // Envio confirmado → registra a conversão no Google Ads (via GTM)
-        pushConversionEvent(leadType, termo);
+        finishSuccess(form, leadType, termo, origem, fields);
+    }
 
-        showMessage(form, 'success', 'Recebemos seu contato! Em breve nossa equipe retornará.');
-        form.reset();
+    // Sucesso: conversão, mensagem e evento para quem quiser encadear ações
+    // (o gate do WhatsApp escuta 'luzago:lead-success' para então redirecionar).
+    function finishSuccess(form, leadType, termo, origem, fields) {
+        pushConversionEvent(leadType, termo, origem);
+
+        if (!form.hasAttribute('data-suppress-success')) {
+            showMessage(form, 'success', 'Recebemos seu contato! Em breve nossa equipe retornará.');
+            form.reset();
+        }
 
         var fileLabel = form.querySelector('[data-file-label]');
         if (fileLabel) {
@@ -181,6 +200,11 @@
                 labelEl.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i><span>Clique para enviar seu currículo</span>';
             }
         }
+
+        form.dispatchEvent(new CustomEvent('luzago:lead-success', {
+            bubbles: true,
+            detail: { leadType: leadType, origem: origem, termo: termo, fields: fields }
+        }));
     }
 
     function initFileLabels() {
@@ -196,24 +220,38 @@
         });
     }
 
-    function initForms() {
-        captureSearchTerm();
+    function bindForm(form) {
+        if (!form || form.dataset.leadBound === '1') return;
+        form.dataset.leadBound = '1';
 
-        document.querySelectorAll('form[data-lead-form]').forEach(function (form) {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                setLoading(form, true);
-                submitLead(form)
-                    .catch(function (err) {
-                        var msg = (err && err.message) ? err.message : 'Não foi possível enviar agora. Tente novamente ou ligue (41) 3668-7866.';
-                        showMessage(form, 'error', msg);
-                    })
-                    .finally(function () {
-                        setLoading(form, false);
-                    });
-            });
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            setLoading(form, true);
+            submitLead(form)
+                .catch(function (err) {
+                    var msg = (err && err.message) ? err.message : 'Não foi possível enviar agora. Tente novamente ou ligue (41) 3668-7866.';
+                    showMessage(form, 'error', msg);
+                    form.dispatchEvent(new CustomEvent('luzago:lead-error', {
+                        bubbles: true,
+                        detail: { error: err }
+                    }));
+                })
+                .finally(function () {
+                    setLoading(form, false);
+                });
         });
     }
+
+    function initForms() {
+        captureSearchTerm();
+        document.querySelectorAll('form[data-lead-form]').forEach(bindForm);
+    }
+
+    window.LuzagoLeads = {
+        bindForm: bindForm,
+        showMessage: showMessage,
+        captureSearchTerm: captureSearchTerm
+    };
 
     document.addEventListener('DOMContentLoaded', function () {
         initForms();
