@@ -65,7 +65,7 @@ function resolveSiteUrl() {
   if (process.env.CF_PAGES_URL) {
     return process.env.CF_PAGES_URL.replace(/\/$/, '');
   }
-  return 'https://luzagoalimentos.com.br';
+  return 'https://www.luzagoalimentos.com.br';
 }
 
 function writeRuntimeConfig() {

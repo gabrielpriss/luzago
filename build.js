@@ -18,7 +18,7 @@ const sharp = require('sharp');
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
-const SITE_URL = (process.env.SITE_URL || 'https://luzagoalimentos.com.br').replace(/\/$/, '');
+const SITE_URL = (process.env.SITE_URL || 'https://www.luzagoalimentos.com.br').replace(/\/$/, '');
 const DEFAULT_OG_IMAGE = SITE_URL + '/assets/icones/logo-luzago.webp';
 const ROUTES = require('./scripts/prepare-deploy-routes.json');
 

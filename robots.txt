@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://luzagoalimentos.com.br/sitemap.xml
+Sitemap: https://www.luzagoalimentos.com.br/sitemap.xml
