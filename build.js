@@ -379,10 +379,13 @@ async function processHtml(htmlFiles, pagesCss) {
     html = ensurePagesCssLink(html);
     html = injectPreconnect(html);
 
-    const meta = extractMeta(html);
-    const canonical = routeToCanonical(rel);
-    const ogImage = extractOgImage(html);
-    html = injectSeo(html, canonical, meta, ogImage);
+    // A 404 é servida em qualquer endereço inexistente: sem canonical nem og:url.
+    if (rel !== '404.html') {
+      const meta = extractMeta(html);
+      const canonical = routeToCanonical(rel);
+      const ogImage = extractOgImage(html);
+      html = injectSeo(html, canonical, meta, ogImage);
+    }
     html = rewriteAssetPaths(html);
 
     imageWarnings.push(...auditImages(html, rel));
