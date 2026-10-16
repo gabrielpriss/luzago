@@ -225,3 +225,11 @@ footer {
         animation-duration: 0.01ms !important;
     }
 }
+
+/* Celular: o bloco que ocupa duas colunas não fica quadrado */
+@media (max-width: 767px) {
+    .product-card.col-span-2 {
+        aspect-ratio: auto;
+        min-height: 128px;
+    }
+}
