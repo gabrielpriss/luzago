@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     padding: 16px;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 .wa-gate.is-open {

@@ -17,8 +17,8 @@ module.exports = {
         'luzago-dark': '#2c2a29',
       },
       fontFamily: {
-        sans: ['Noto Serif', 'serif'],
-        serif: ['Noto Serif', 'serif'],
+        sans: ['"Hanken Grotesk"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+        serif: ['Bitter', 'Georgia', 'serif'],
       },
     },
   },

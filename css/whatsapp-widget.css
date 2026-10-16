@@ -45,7 +45,7 @@
     transform: translateX(-8px);
     transition: opacity 0.25s ease, transform 0.25s ease;
     pointer-events: none;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 .luzago-wa-widget:hover .luzago-wa-widget__cta {

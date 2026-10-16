@@ -1,0 +1,227 @@
+/*
+ * Tema visual Luzago (2026)
+ * Carregado por último em todas as páginas: sobrepõe tipografia, botões,
+ * formulários e ritmo das seções sem mexer na estrutura do HTML.
+ *
+ * Tipografia
+ *   Títulos: Bitter (serifa slab, lembra a impressão das sacarias)
+ *   Texto e interface: Hanken Grotesk
+ * Cores da marca mantidas; neutros com leve tom verde.
+ */
+
+:root {
+    --lz-green-dark: #0f4c2c;
+    --lz-green: #197c45;
+    --lz-red: #d52b1e;
+    --lz-red-hover: #b8231a;
+    --lz-yellow: #fbb034;
+    --lz-yellow-hover: #f0a21c;
+    --lz-ink: #1d2420;
+    --lz-muted: #56605a;
+    --lz-line: #dde3dc;
+    --lz-mist: #f3f6f1;
+    --lz-font-display: 'Bitter', Georgia, 'Times New Roman', serif;
+    --lz-font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--lz-font-body);
+    color: var(--lz-ink);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Títulos ------------------------------------------------------------- */
+
+h1, h2, h3 {
+    font-family: var(--lz-font-display);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+}
+
+h1 { font-weight: 700; line-height: 1.12; }
+h2 { font-weight: 700; line-height: 1.2; }
+h3 { font-weight: 600; line-height: 1.3; }
+
+h4, h5, h6 {
+    font-family: var(--lz-font-body);
+    font-weight: 700;
+}
+
+/* Títulos em caixa alta espaçada passam a frase normal */
+h1.uppercase, h2.uppercase, h3.uppercase, h4.uppercase {
+    text-transform: none;
+    letter-spacing: -0.01em;
+}
+
+/* Títulos de seção num único verde da marca */
+h2.text-luzago-green,
+h2.text-luzago-green-dark {
+    color: var(--lz-green-dark);
+}
+
+/* Texto corrido alinhado à esquerda (sem rios do justificado) */
+.text-justify {
+    text-align: left !important;
+    hyphens: manual;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+/* Botões ------------------------------------------------------------- */
+
+.btn {
+    font-family: var(--lz-font-body);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    letter-spacing: 0;
+    text-transform: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    box-shadow: none;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+.btn:hover { transform: none; }
+.btn:active { transform: translateY(1px); }
+
+.btn--primary { background-color: var(--lz-red); color: #fff; }
+.btn--primary:hover { background-color: var(--lz-red-hover); }
+
+.btn--secondary { background-color: var(--lz-yellow); color: #22201f; }
+.btn--secondary:hover { background-color: var(--lz-yellow-hover); }
+
+.btn--sm {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.875rem;
+    letter-spacing: 0;
+    box-shadow: none;
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid rgba(25, 124, 69, 0.45);
+    outline-offset: 2px;
+}
+
+/* Cabeçalho e navegação ---------------------------------------------- */
+
+header nav a,
+header .nav-link {
+    font-family: var(--lz-font-body);
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+/* Faixa de categorias ------------------------------------------------ */
+
+.product-card h3 {
+    font-family: var(--lz-font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+/* Texto branco sobre amarelo não tinha contraste: vira escuro */
+.product-card.bg-luzago-yellow h3 { color: #22201f; }
+.product-card.bg-luzago-yellow img { filter: none; }
+
+.product-card img {
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover img {
+    transform: translateY(-3px);
+}
+
+/* Formulários -------------------------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+    font-family: var(--lz-font-body);
+    font-size: 1rem;
+    border-radius: 10px !important;
+    border-color: var(--lz-line) !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--lz-green) !important;
+    box-shadow: 0 0 0 3px rgba(25, 124, 69, 0.18) !important;
+}
+
+label {
+    font-family: var(--lz-font-body);
+    font-weight: 600;
+}
+
+/* Fundos e ritmo das seções ------------------------------------------ */
+
+.bg-gray-50 {
+    background-color: var(--lz-mist) !important;
+}
+
+/* Cartões de avaliação: borda fina no lugar da sombra genérica */
+.review-card,
+#quem-abastecemos .rounded-xl {
+    box-shadow: none !important;
+    border: 1px solid var(--lz-line) !important;
+    border-radius: 14px !important;
+}
+
+.review-card:hover {
+    transform: none !important;
+}
+
+/* Rodapé ------------------------------------------------------------- */
+
+footer h3 {
+    font-family: var(--lz-font-display);
+    font-size: 1.125rem;
+}
+
+footer p,
+footer a,
+footer li {
+    font-family: var(--lz-font-body);
+}
+
+/* Antes vinha do aos-fixes.css (AOS removido) */
+section,
+footer {
+    overflow-x: clip;
+}
+
+/* Sem a biblioteca AOS, nada fica escondido esperando animação */
+[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
