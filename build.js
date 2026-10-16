@@ -22,6 +22,17 @@ const SITE_URL = (process.env.SITE_URL || 'https://www.luzagoalimentos.com.br').
 const DEFAULT_OG_IMAGE = SITE_URL + '/assets/icones/logo-luzago.webp';
 const ROUTES = require('./scripts/prepare-deploy-routes.json');
 
+// Homologação: qualquer build fora do branch main (ou SITE_ENV=homologacao).
+// Nesse modo o site não é indexado, não carrega o GTM (sem conversões no
+// Google Ads) e os formulários não gravam na planilha real da Luzago.
+const CF_BRANCH = process.env.CF_PAGES_BRANCH || '';
+const IS_STAGING = process.env.SITE_ENV === 'homologacao' || (CF_BRANCH !== '' && CF_BRANCH !== 'main');
+const STAGING_HEAD = '<meta name="robots" content="noindex, nofollow">';
+const STAGING_BADGE =
+  '<div style="position:fixed;left:12px;bottom:12px;z-index:9999;background:#111;color:#ffd527;' +
+  'font:600 12px/1 Arial,sans-serif;padding:8px 12px;border-radius:999px;opacity:.9;pointer-events:none">' +
+  'Homologação Prime · formulários não enviam</div>';
+
 const cleanCss = new CleanCSS({ level: 2 });
 
 const THIRD_PARTY_PRECONNECT = [
@@ -244,6 +255,7 @@ async function writeRuntimeConfig() {
     sheetsUrl = match ? match[1] : defaultUrl;
   }
   if (!sheetsUrl) sheetsUrl = defaultUrl;
+  if (IS_STAGING) sheetsUrl = '';
 
   const content =
     'window.LUZAGO_RUNTIME=' +
@@ -285,7 +297,9 @@ function writeSitemapAndRobots() {
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap, 'utf8');
   fs.writeFileSync(
     path.join(DIST, 'robots.txt'),
-    'User-agent: *\nAllow: /\n\nSitemap: ' + SITE_URL + '/sitemap.xml\n',
+    IS_STAGING
+      ? 'User-agent: *\nDisallow: /\n'
+      : 'User-agent: *\nAllow: /\n\nSitemap: ' + SITE_URL + '/sitemap.xml\n',
     'utf8'
   );
 }
@@ -359,6 +373,12 @@ function copyDeployMeta() {
       fs.copyFileSync(src, path.join(DIST, file));
     }
   });
+  if (IS_STAGING) {
+    const headersPath = path.join(DIST, '_headers');
+    const current = fs.existsSync(headersPath) ? fs.readFileSync(headersPath, 'utf8') : '';
+    // Cabeçalho próprio para todas as rotas: o Pages soma as regras que casam.
+    fs.writeFileSync(headersPath, current.replace(/\s*$/, '\n') + '\n/*\n  X-Robots-Tag: noindex, nofollow\n', 'utf8');
+  }
 }
 
 async function processHtml(htmlFiles, pagesCss) {
@@ -373,6 +393,12 @@ async function processHtml(htmlFiles, pagesCss) {
     const gtmBody = html.match(GTM_BODY_PATTERN);
     if (gtmHead) gtmFragments.push(gtmHead[0]);
     if (gtmBody) gtmFragments.push(gtmBody[0]);
+
+    if (IS_STAGING) {
+      html = html.replace(GTM_HEAD_PATTERN, '').replace(GTM_BODY_PATTERN, '');
+      html = html.replace('<head>', '<head>\n    ' + STAGING_HEAD);
+      html = html.replace(/<\/body>/i, STAGING_BADGE + '\n</body>');
+    }
 
     html = replaceTailwindCdn(html);
     html = stripInlineStyles(html);
@@ -446,18 +472,24 @@ function verifyCriticalScripts() {
   });
 
   const indexHtml = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
-  ['GTM-KP9TKWZD', 'rel="canonical"', 'og:title', 'twitter:card', '/css/tailwind.css'].forEach(function (token) {
+  const required = IS_STAGING
+    ? ['noindex', 'rel="canonical"', 'og:title', 'twitter:card', '/css/tailwind.css']
+    : ['GTM-KP9TKWZD', 'rel="canonical"', 'og:title', 'twitter:card', '/css/tailwind.css'];
+  required.forEach(function (token) {
     if (!indexHtml.includes(token)) {
       throw new Error('index.html ausente: ' + token);
     }
   });
+  if (IS_STAGING && indexHtml.includes('GTM-KP9TKWZD')) {
+    throw new Error('Homologação não pode carregar o GTM de produção.');
+  }
 
   log('verify', 'scripts críticos e SEO validados');
 }
 
 async function main() {
   loadDotEnv();
-  log('start', 'SITE_URL=' + SITE_URL);
+  log('start', 'SITE_URL=' + SITE_URL + (IS_STAGING ? ' | HOMOLOGAÇÃO (branch ' + (CF_BRANCH || 'local') + ')' : ''));
 
   rimraf(DIST);
   ensureDir(path.join(DIST, 'css'));
