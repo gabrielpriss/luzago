@@ -182,11 +182,16 @@ function injectPreconnect(html) {
   return updated;
 }
 
+// Versão do deploy nos CSS/JS locais: o _headers guarda /css e /js em cache por
+// 24h, então sem isso o visitante veria o visual antigo depois de um deploy.
+const ASSET_VERSION = (process.env.CF_PAGES_COMMIT_SHA || Date.now().toString(36)).slice(0, 8);
+
 function rewriteAssetPaths(content) {
   return content
     .replace(/\/css\//g, '/css/')
     .replace(/\/js\//g, '/js/')
-    .replace(/\/assets\//g, '/assets/');
+    .replace(/\/assets\//g, '/assets/')
+    .replace(/(href|src)="(\/(?:css|js)\/[^"?#]+\.(?:css|js))"/g, '$1="$2?v=' + ASSET_VERSION + '"');
 }
 
 function replaceTailwindCdn(html) {
