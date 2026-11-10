@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Tailwind CSS -->
+    <script>document.documentElement.classList.add("js-aos");</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -166,8 +167,20 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-[85vh] flex items-center justify-center text-center px-4 relative py-16">
-        <div class="max-w-4xl mx-auto flex flex-col items-center">
+    <!-- Hero em carrossel.
+         TODO antes de publicar em produção: as três primeiras imagens são do
+         banco Unsplash e hoje apontam para o CDN deles. Trocar por arquivos
+         locais em /assets/imagens/ (ou por fotos reais dos produtos Luzago).
+         Créditos Unsplash: Jason Leung, Tijana Drndarski, Maksim Shutov, Andrea Leon. -->
+    <section class="hero-carousel min-h-[85vh] flex items-center justify-center text-center px-4 relative py-16" data-hero-carousel>
+        <div class="hero-carousel__slides">
+            <div class="hero-carousel__slide is-active" style="background-image:url('https://images.unsplash.com/photo-1529517986296-847580704921?auto=format&amp;fit=crop&amp;w=1920&amp;q=68')"></div>
+            <div class="hero-carousel__slide" data-bg="https://images.unsplash.com/photo-1579705745811-a32bef7856a3?auto=format&amp;fit=crop&amp;w=1920&amp;q=68"></div>
+            <div class="hero-carousel__slide" data-bg="https://images.unsplash.com/photo-1543158181-1274e5362710?auto=format&amp;fit=crop&amp;w=1920&amp;q=68"></div>
+            <div class="hero-carousel__slide" data-bg="https://images.unsplash.com/photo-1546702005-7f8e5aeab4a6?auto=format&amp;fit=crop&amp;w=1920&amp;q=68"></div>
+        </div>
+        <div class="hero-carousel__veil"></div>
+        <div class="max-w-4xl mx-auto flex flex-col items-center hero-carousel__content">
             <div class="mb-6">
                 <img loading="eager" decoding="async" src="/assets/icones/icone-folha-luzago.webp" alt="Luzago Alimentos" class="h-20 md:h-28 w-auto object-contain drop-shadow-lg">
             </div>
@@ -182,6 +195,12 @@
                     Solicite seu orçamento
                 </a>
             </div>
+        </div>
+        <div class="hero-carousel__dots" role="tablist" aria-label="Imagens do topo">
+            <button type="button" class="hero-carousel__dot is-active" role="tab" aria-selected="true" aria-label="Temperos e condimentos"></button>
+            <button type="button" class="hero-carousel__dot" role="tab" aria-selected="false" aria-label="Cereais e grãos"></button>
+            <button type="button" class="hero-carousel__dot" role="tab" aria-selected="false" aria-label="Frutas secas e castanhas"></button>
+            <button type="button" class="hero-carousel__dot" role="tab" aria-selected="false" aria-label="Produtos a granel no atacado"></button>
         </div>
     </section>
 
@@ -432,7 +451,7 @@
                 @media (prefers-reduced-motion: reduce) { .faq-item summary::after { transition: none; } }
             </style>
             <div class="faq-list">
-                <details class="faq-item">
+                <details class="faq-item" open>
                     <summary>A Luzago vende a granel?</summary>
                     <p>Sim, atendemos quem trabalha com venda a granel. Trabalhamos com embalagens de 100 g a 25 kg, conforme o produto. Isso atende quem revende a granel, quem fraciona e quem usa na cozinha profissional.</p>
                 </details>
@@ -455,65 +474,263 @@
 
     <!-- Avaliações Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-6xl text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-luzago-green mb-3">Avaliações no Google</h2>
-            <p class="text-gray-600 text-sm mb-10">O que nossos clientes dizem sobre a Luzago Alimentos</p>
-            
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
-                <!-- Geral -->
-                <div class="bg-white rounded-lg shadow border border-gray-100 p-6 flex flex-col items-center w-full md:w-64 transform hover:scale-105 transition">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-2" style="font-variant-numeric:tabular-nums">4,7</h3>
-                    <div class="flex text-yellow-400 text-xl mb-1">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-luzago-green mb-3 text-center">Depoimentos</h2>
+            <p class="text-gray-600 text-sm mb-10 text-center">O que nossos clientes dizem sobre a Luzago Alimentos</p>
+
+            <div class="greviews" data-greviews>
+                <div class="greviews__summary">
+                    <p class="greviews__label">Excelente</p>
+                    <div class="greviews__stars" role="img" aria-label="5 de 5 estrelas">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-gray-500 text-xs mb-3">Com base em <strong>60 avaliações</strong></p>
-                    <img loading="lazy" decoding="async" src="/assets/icones/icone-google.svg" alt="Google" class="h-6 opacity-70">
-                </div>
-                
-                <!-- Avaliação 1 -->
-                <div class="bg-white rounded-lg shadow border border-gray-100 p-6 text-left w-full md:w-72">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-full overflow-hidden">
-                            <img width="128" height="128" loading="lazy" decoding="async" src="/assets/icones/avatar-arthur-alexandre.webp" alt="Arthur Alexandre" class="img-lazy w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-sm text-gray-800 flex items-center gap-1">Arthur Alexandre <img loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Conta verificada no Google" class="w-3 h-3"></h4>
-                            <p class="text-gray-400 text-xs">1 ano atrás</p>
-                        </div>
-                    </div>
-                    <div class="flex text-yellow-400 text-xs mb-2">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm">O Motorista Cleomar sempre bem humorado nota 10 de pessoa e atendimento</p>
+                    <p class="greviews__count">Com base em <strong>60 avaliações</strong></p>
+                    <img class="greviews__google" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Google">
                 </div>
 
-                <!-- Avaliação 2 -->
-                <div class="bg-white rounded-lg shadow border border-gray-100 p-6 text-left w-full md:w-72">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-full overflow-hidden">
-                            <img width="128" height="128" loading="lazy" decoding="async" src="/assets/icones/avatar-luanny-scalada.webp" alt="Luanny Scalada" class="img-lazy w-full h-full object-cover">
+                <div class="greviews__viewport">
+                    <button type="button" class="greviews__nav greviews__nav--prev" aria-label="Avaliações anteriores" hidden>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="greviews__track">
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ACg8ocKrBJNAlKXxOh6VouOWRv2pzgvgs4407tZ6w0QYdaHFfqH4rw=s88-c" alt="Foto de CIE locação de Brinquedos">
+                            <div class="gcard__who">
+                                <p class="gcard__name">CIE locação de Brinquedos</p>
+                                <p class="gcard__date">há 4 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
                         </div>
-                        <div>
-                            <h4 class="font-bold text-sm text-gray-800 flex items-center gap-1">Luanny Scalada <img loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Conta verificada no Google" class="w-3 h-3"></h4>
-                            <p class="text-gray-400 text-xs">3 anos atrás</p>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
                         </div>
+                        <p class="gcard__text">Excelente empresa! Atendimento de qualidade, equipe atenciosa e comprometida, além de produtos e serviços de confiança. Parabéns à Luzago pelo profissionalismo e pela dedicação em atender seus clientes com excelência. Super recomendo!</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ACg8ocJws9rEJTV_7UMDzNbJ9yOIjctRfqzuEA-8fFAfV_8UD_ml51tL=s88-c" alt="Foto de Marcelo Nicolau">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Marcelo Nicolau</p>
+                                <p class="gcard__date">há 5 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Sou proprietário de um restaurante no centro de Curitiba. A Luzago nos trouxe economia e qualidade nos produtos. Não abrimos mão deles como fornecedores. O atendimento comercial realizado pela Ana é sensacional, faz um acompanhamento com o cliente impecável. O pessoal da recepção é muito educado e gentil e especial o Juliano do faturamento, sempre pronto para ajudar. Indico e recomendo a Luzago!</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ACg8ocIPFe585yJ8w4Re28Eb5BjurDpnJHd_gqLZzqQy_3D7ujRKSg=s88-c" alt="Foto de Ana Lu">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Ana Lu</p>
+                                <p class="gcard__date">há 4 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Dou 5 estrelas porque não tem a opção de dar 6. Sempre fui bem atendida pela Eliane, um amor de pessoa, compro há mais de 10 anos os produtos da Luzago e é excelente. Os meninos que fazem as entregas são super educados e ótimos profissionais! Só tenho gratidão por essa equipe maravilhosa.</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ALV-UjVeU6tOQ3WwJ54g73zr5KlYnOyR71hG7ryzwfZEJYAE4eB6iKt_=s88-c" alt="Foto de Issam Helou">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Issam Helou</p>
+                                <p class="gcard__date">há 5 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Minha experiência com a empresa tem sido excelente, principalmente pelo atendimento da Aline. Ela é de uma atenção, gentileza e profissionalismo raros hoje em dia. Sempre muito prestativa e eficiente. Recomendo de olhos fechados.</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ACg8ocJgFN4KaRN21zaZLYqJ6MSXAoeiXshK8G31vy5db-cQI07SWQ=s88-c" alt="Foto de Sonia Evangelista">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Sonia Evangelista</p>
+                                <p class="gcard__date">há 5 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Conheço a Luzago há um bom tempo. Para mim, a melhor empresa, com qualidade, preços honestos e compromisso na entrega, sempre em dia. A vendedora Sueli é sempre atenciosa e parceira, e o motorista Cleomar está sempre de alto astral. Excelente o conjunto!</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ACg8ocIpa9_ITQnnYOzrtVvEO9fjC10TxqlyhcyXvKg-ilLHyMgucA=s88-c" alt="Foto de Luani Biss Borges">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Luani Biss Borges</p>
+                                <p class="gcard__date">há 3 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Vendedora Letícia sempre me atende muito bem, a empresa tem excelentes preços e o atendimento de todos também sempre muito bom!</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ACg8ocIU-yucL7r0pAl0dbsRbTXP7ZXg3JtLGbMIqS4mNAIaNKRUag=s88-c" alt="Foto de Marco Alves">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Marco Alves</p>
+                                <p class="gcard__date">há 5 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Produtos de qualidade, boa entrega e principalmente excelente atendimento pela Aline. Ótima profissional, estou contente com a empresa.</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ACg8ocI1Qn8HF61xgKLhjC-OCD2fb7MM2jH0k4DGp-ENw1ipoQc6=s88-c" alt="Foto de Hingred Michelle">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Hingred Michelle</p>
+                                <p class="gcard__date">há 5 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Quero agradecer pelo atendimento e a parceria de anos da Luzago, principalmente da vendedora que sempre nos atende muito bem, a Sueli. Gratidão pela parceria.</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ALV-UjWW1pmeAlOwff4BugOD8K_yjV8e2vAB_hod0EL_ZvRFPeNcW5Pi=s88-c" alt="Foto de Elizeu Moraes">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Elizeu Moraes</p>
+                                <p class="gcard__date">há 3 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Excelente empresa! Atendimento de qualidade, produtos excelentes e uma equipe muito séria e comprometida. Super recomendo.</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
+                    <article class="gcard">
+                        <div class="gcard__head">
+                            <img class="gcard__avatar" loading="lazy" decoding="async" width="88" height="88"
+                                 src="https://lh3.googleusercontent.com/a/ALV-UjVMB01PO4NcCviE3ZOp1YuA31rsAdkdXAK-Hg4K0QNKpjIj1BdeEQ=s88-c" alt="Foto de Jaberson Farias">
+                            <div class="gcard__who">
+                                <p class="gcard__name">Jaberson Farias</p>
+                                <p class="gcard__date">há 4 meses</p>
+                            </div>
+                            <img class="gcard__g" loading="lazy" decoding="async" src="/assets/icones/icone-google-colorido.svg" alt="Avaliação publicada no Google">
+                        </div>
+                        <div class="gcard__rating">
+                            <div class="gcard__stars" role="img" aria-label="5 de 5 estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <img class="gcard__check" loading="lazy" decoding="async" src="/assets/icones/icone-verificado.svg" alt="Avaliação verificada">
+                        </div>
+                        <p class="gcard__text">Parabéns à Luzago, um ótimo atendimento e produtos com muita qualidade. Parabéns também para minha vendedora Sueli, muito atenciosa.</p>
+                        <button type="button" class="gcard__more">Leia mais</button>
+                    </article>
                     </div>
-                    <div class="flex text-yellow-400 text-xs mb-2">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm">Excelente empresa curitibana com excelência em atendimento e alimentos de qualidade.</p>
+                    <button type="button" class="greviews__nav greviews__nav--next" aria-label="Próximas avaliações">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -524,7 +741,7 @@
         <div class="h-[450px] w-full bg-gray-200 relative">
             <iframe 
                 title="Luzago Alimentos, Curitiba, Região Metropolitana e litoral do Paraná"
-                src="https://maps.google.com/maps?q=Luzago+Alimentos,+Rua+Alto+Paran%C3%A1+1645,+Pinhais+-+PR&hl=pt-BR&z=14&output=embed"
+                src="https://maps.google.com/maps?q=Luzago+Alimentos,+Rua+Alto+Paran%C3%A1+1645,+Pinhais+-+PR&hl=pt-BR&z=10&output=embed"
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
