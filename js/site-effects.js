@@ -239,6 +239,15 @@
         window.addEventListener('resize', atualizarSetas);
         atualizarSetas();
 
+        /* Avatar que não carrega cai para a imagem padrão do site */
+        bloco.querySelectorAll('.gcard__avatar').forEach(function (img) {
+            img.addEventListener('error', function () {
+                if (img.dataset.fallback) return;
+                img.dataset.fallback = '1';
+                img.src = '/assets/imagens/avatar-padrao-1.webp';
+            });
+        });
+
         /* "Leia mais" só aparece quando o texto realmente foi cortado */
         bloco.querySelectorAll('.gcard').forEach(function (card) {
             var texto = card.querySelector('.gcard__text');
