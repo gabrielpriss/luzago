@@ -287,10 +287,10 @@ html.js-aos [data-aos].aos-animate {
 /* ══════════════════════════════════════════════════════════════
    Avaliações do Google (padrão Conceito Prime)
    ══════════════════════════════════════════════════════════════ */
-.greviews { display: grid; gap: 28px; align-items: center; }
+.greviews { display: grid; gap: 28px; align-items: center; min-width: 0; }
 
 @media (min-width: 1024px) {
-    .greviews { grid-template-columns: 220px 1fr; gap: 36px; }
+    .greviews { grid-template-columns: 220px minmax(0, 1fr); gap: 36px; }
 }
 
 .greviews__summary { text-align: center; }
@@ -308,7 +308,7 @@ html.js-aos [data-aos].aos-animate {
 .greviews__count strong { color: #1f2937; }
 .greviews__google { height: 30px; margin: 12px auto 0; display: block; }
 
-.greviews__viewport { position: relative; }
+.greviews__viewport { position: relative; min-width: 0; }
 
 .greviews__track {
     display: flex;
